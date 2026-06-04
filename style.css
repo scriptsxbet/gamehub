@@ -913,3 +913,67 @@ button {
         height: 58px;
     }
 }
+
+.language-page {
+    min-height: 100vh;
+    width: min(900px, calc(100% - 32px));
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.language-box {
+    width: 100%;
+    max-width: 620px;
+    padding: 46px 28px;
+    border-radius: 32px;
+    background: rgba(18, 31, 23, 0.92);
+    border: 1px solid var(--green-line);
+    box-shadow: var(--shadow);
+}
+
+.language-box h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.language-box h1 span {
+    color: var(--green);
+}
+
+.language-box p {
+    margin: 18px 0 30px;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+.language-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.lang-btn {
+    min-height: 64px;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    color: #001006;
+    background: var(--green);
+    font-size: 1.15rem;
+    font-weight: 900;
+    transition: 0.2s ease;
+}
+
+.lang-btn:hover {
+    transform: translateY(-4px);
+}
+
+@media (max-width: 600px) {
+    .language-buttons {
+        grid-template-columns: 1fr;
+    }
+}
