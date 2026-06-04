@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrashUp | GameHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="watch-page">
+
+        <section class="tool-hero">
+
+            <div class="platform-name">
+                <h1>Game<span>Hub</span></h1>
+            </div>
+
+            <div class="tool-details">
+
+                <span class="tool-type">
+                    <i class="fa-brands fa-android"></i>
+                    Android APK
+                </span>
+
+                <h2>CrashUp</h2>
+
+                <p>
+                    أداة مجانية تم تطويرها لاختراق الـ WebSocket الخاص بلعبة Crash وسحب توقيت الانفجار فورياً، مع كسر
+                    التشفير وعرض البيانات الحية بدقة فائقة قبل بداية الجولة مباشرة عبر واجهة برمجية متطورة. </p>
+
+                <div class="available-platforms">
+
+                    <span class="platform-title">
+                        <i class="fa-solid fa-layer-group"></i>
+                        المنصات المتاحة
+                    </span>
+
+                    <div class="platform-pills">
+                        <span>1xBet</span>
+                        <span>MelBet</span>
+                        <span>LineBet</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+        <section class="video-shell">
+
+            <div class="video-holder">
+
+                <video id="mainVideo" src="1.mp4" playsinline preload="metadata"
+                    controlslist="nodownload noplaybackrate" disablepictureinpicture oncontextmenu="return false">
+                </video>
+
+                <button type="button" class="video-start" id="videoStart">
+                    <i class="fa-solid fa-play"></i>
+                    <span>فيديو الشرح</span>
+                </button>
+
+            </div>
+
+            <div class="video-controls">
+
+                <button type="button" id="playBtn" class="control-button">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+
+                <div class="video-progress" id="videoProgress">
+                    <div class="progress-loaded" id="progressLoaded"></div>
+                    <div class="progress-current" id="progressCurrent"></div>
+                </div>
+
+                <span class="video-time" id="videoTime">00:00</span>
+
+                <button type="button" id="muteBtn" class="control-button">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+
+                <button type="button" id="fullscreenBtn" class="control-button">
+                    <i class="fa-solid fa-expand"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="download-actions">
+
+            <a href="apk/crashup_tool.apk" download class="download-apk">
+                <i class="fa-brands fa-android"></i>
+                تحميل الاداة
+            </a>
+
+            <a href="https://t.me/YourTelegram" target="_blank" class="support-link">
+                <i class="fa-brands fa-telegram"></i>
+                في حالة حدوث أي مشكلة تواصل مع الدعم الفني
+            </a>
+
+        </section>
+
+    </main>
+
+    <script>
+        const video = document.getElementById("mainVideo");
+        const videoStart = document.getElementById("videoStart");
+        const playBtn = document.getElementById("playBtn");
+        const muteBtn = document.getElementById("muteBtn");
+        const fullscreenBtn = document.getElementById("fullscreenBtn");
+        const videoProgress = document.getElementById("videoProgress");
+        const progressCurrent = document.getElementById("progressCurrent");
+        const progressLoaded = document.getElementById("progressLoaded");
+        const videoTime = document.getElementById("videoTime");
+
+        function formatTime(time) {
+            if (!time || isNaN(time)) return "00:00";
+
+            const minutes = Math.floor(time / 60);
+            const seconds = Math.floor(time % 60);
+
+            return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+        }
+
+        function updatePlayIcon() {
+            if (video.paused) {
+                playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                videoStart.classList.remove("hidden");
+            } else {
+                playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                videoStart.classList.add("hidden");
+            }
+        }
+
+        function playVideo() {
+            video.play();
+            updatePlayIcon();
+        }
+
+        function pauseVideo() {
+            video.pause();
+            updatePlayIcon();
+        }
+
+        videoStart.addEventListener("click", playVideo);
+
+        playBtn.addEventListener("click", function () {
+            if (video.paused) {
+                playVideo();
+            } else {
+                pauseVideo();
+            }
+        });
+
+        video.addEventListener("click", function () {
+            if (video.paused) {
+                playVideo();
+            } else {
+                pauseVideo();
+            }
+        });
+
+        video.addEventListener("play", updatePlayIcon);
+        video.addEventListener("pause", updatePlayIcon);
+
+        video.addEventListener("timeupdate", function () {
+            const percent = (video.currentTime / video.duration) * 100;
+            progressCurrent.style.width = `${percent}%`;
+            videoTime.textContent = formatTime(video.currentTime);
+        });
+
+        video.addEventListener("progress", function () {
+            if (video.buffered.length > 0 && video.duration) {
+                const loaded = (video.buffered.end(video.buffered.length - 1) / video.duration) * 100;
+                progressLoaded.style.width = `${loaded}%`;
+            }
+        });
+
+        video.addEventListener("ended", function () {
+            video.currentTime = 0;
+            progressCurrent.style.width = "0%";
+            videoTime.textContent = "00:00";
+            updatePlayIcon();
+        });
+
+        videoProgress.addEventListener("click", function (e) {
+            const rect = videoProgress.getBoundingClientRect();
+            const clickPosition = e.clientX - rect.left;
+            const percent = clickPosition / rect.width;
+
+            video.currentTime = percent * video.duration;
+        });
+
+        muteBtn.addEventListener("click", function () {
+            video.muted = !video.muted;
+
+            muteBtn.innerHTML = video.muted
+                ? '<i class="fa-solid fa-volume-xmark"></i>'
+                : '<i class="fa-solid fa-volume-high"></i>';
+        });
+
+        fullscreenBtn.addEventListener("click", function () {
+            const videoBox = document.querySelector(".video-shell");
+
+            if (videoBox.requestFullscreen) {
+                videoBox.requestFullscreen();
+            } else if (videoBox.webkitRequestFullscreen) {
+                videoBox.webkitRequestFullscreen();
+            }
+        });
+
+        document.addEventListener("keydown", function (e) {
+            if ((e.ctrlKey && e.key.toLowerCase() === "s") || (e.ctrlKey && e.key.toLowerCase() === "u")) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
