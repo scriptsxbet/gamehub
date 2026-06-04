@@ -208,13 +208,49 @@
                 : '<i class="fa-solid fa-volume-high"></i>';
         });
 
-        fullscreenBtn.addEventListener("click", function () {
-            const videoBox = document.querySelector(".video-shell");
+        fullscreenBtn.addEventListener("click", async function () {
+            try {
+                /*
+                    iPhone / iPad Safari:
+                    لازم نستخدم webkitEnterFullscreen على عنصر الفيديو نفسه
+                */
+                if (video.webkitEnterFullscreen) {
+                    video.webkitEnterFullscreen();
+                    return;
+                }
 
-            if (videoBox.requestFullscreen) {
-                videoBox.requestFullscreen();
-            } else if (videoBox.webkitRequestFullscreen) {
-                videoBox.webkitRequestFullscreen();
+                /*
+                    Android Chrome / أغلب المتصفحات:
+                    الأفضل نعمل fullscreen للفيديو نفسه
+                */
+                if (video.requestFullscreen) {
+                    await video.requestFullscreen();
+                    return;
+                }
+
+                if (video.webkitRequestFullscreen) {
+                    video.webkitRequestFullscreen();
+                    return;
+                }
+
+                if (video.msRequestFullscreen) {
+                    video.msRequestFullscreen();
+                    return;
+                }
+
+                /*
+                    fallback لو المتصفح رفض الفيديو نفسه
+                */
+                const videoBox = document.querySelector(".video-shell");
+
+                if (videoBox.requestFullscreen) {
+                    await videoBox.requestFullscreen();
+                } else if (videoBox.webkitRequestFullscreen) {
+                    videoBox.webkitRequestFullscreen();
+                }
+
+            } catch (error) {
+                console.log("Fullscreen not supported:", error);
             }
         });
 
