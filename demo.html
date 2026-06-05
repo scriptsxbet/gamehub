@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrashUp Demo | GameHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/demo_crashup.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="loader" id="pageLoader">
+        <div class="loader-box">GameHub</div>
+    </div>
+
+    <div class="lang-loader" id="langLoader">
+        <div class="lang-box">
+            <i class='bx bx-loader-alt bx-spin'></i>
+            <p id="langLoaderText">جاري تغيير اللغة</p>
+        </div>
+    </div>
+
+    <header class="header reveal">
+        <div class="logo">GameHub</div>
+
+        <div class="language-box">
+            <select id="langSelect" class="lang-select">
+                <option value="ar">AR</option>
+                <option value="en">EN</option>
+            </select>
+            <i class='bx bx-chevron-down'></i>
+        </div>
+    </header>
+
+
+    <section class="tool-intro reveal">
+        <div class="tool-intro-card">
+
+
+            <h1>CrashUp</h1>
+
+            <p data-key="crashupDesc">
+                أداة مجانية بالكامل تم تطويرها للتنصت على WebSocket لعبة Crash وسحب توقيت الانفجار قبل بداية الجولة
+                وعرضه في الاداة
+            </p>
+
+            <div class="supported-platforms">
+                <span>1xBet</span>
+                <span>Melbet</span>
+                <span>Linebet</span>
+            </div>
+        </div>
+    </section>
+    <section class="demo-section reveal">
+        <div class="demo-frame">
+
+            <div class="custom-video-player" id="customPlayer">
+                <video id="demoVideo" class="demo-video"
+                    src="https://pub-8919913663d740d5896346aa63518984.r2.dev/demo.mp4" preload="metadata" autoplay muted
+                    playsinline webkit-playsinline controlslist="nodownload noplaybackrate" disablepictureinpicture>
+                </video>
+
+                <button class="big-play" id="bigPlay">
+                    <i class='bx bx-play'></i>
+                </button>
+
+                <button class="sound-btn" id="soundBtn">
+                    <i class='bx bx-volume-full'></i>
+                    <span data-key="soundBtn">اضغط لتفعيل الصوت</span>
+                </button>
+
+                <div class="video-controls">
+                    <button id="playPause" class="control-btn">
+                        <i class='bx bx-play'></i>
+                    </button>
+
+                    <div class="progress-box" id="progressBox">
+                        <div class="progress-loaded"></div>
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+
+                    <span class="video-time">
+                        <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+                    </span>
+
+                    <button id="muteBtn" class="control-btn">
+                        <i class='bx bx-volume-mute'></i>
+                    </button>
+
+                    <button id="fullScreenBtn" class="control-btn">
+                        <i class='bx bx-fullscreen'></i>
+                    </button>
+                </div>
+            </div>
+
+            <a href="/crashup.html" class="demo-action" data-key="watchFull">
+                مشاهدة الشرح كامل وتحميل الأداة
+                <i class='bx bx-download'></i>
+            </a>
+
+        </div>
+    </section>
+
+
+
+
+    <footer class="footer reveal">
+        <div class="social">
+            <a href="#"><i class='bx bxl-telegram'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+            <a href="#"><i class='bx bxl-tiktok'></i></a>
+        </div>
+        <p data-key="footer">© 2026 GameHub. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
