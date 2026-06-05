@@ -97,6 +97,19 @@ function applyLanguage(lang, showLoader = false) {
 
         langSelect.value = lang;
 
+        const telegramLink = document.getElementById("telegramLink");
+        const youtubeLink = document.getElementById("youtubeLink");
+
+        if (telegramLink && youtubeLink) {
+            if (lang === "ar") {
+                telegramLink.href = "https://t.me/kiratools";
+                youtubeLink.href = "https://www.youtube.com/@kira-xbet";
+            } else {
+                telegramLink.href = "https://t.me/crashupfree";
+                youtubeLink.href = "https://www.youtube.com/@kiramods-one";
+            }
+        }
+
         if (showLoader) {
             langLoader.classList.remove("show");
         }
