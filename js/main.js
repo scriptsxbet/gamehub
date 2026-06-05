@@ -19,6 +19,7 @@ const translations = {
         watchFull: "مشاهدة الشرح كامل وتحميل الأداة",
         crashupDesc: "أداة مجانية بالكامل تم تطويرها للتنصت على WebSocket لعبة Crash وسحب توقيت الانفجار قبل بداية الجولة وعرضه في الاداة فوراً",
         soundBtn: "اضغط لتفعيل الصوت",
+        freeBadge: "مجانا بالكامل",
     },
     en: {
         badge: "SECURE TOOLS HUB",
@@ -34,6 +35,7 @@ const translations = {
         watchFull: "Watch Full Tutorial & Download Tool",
         crashupDesc: "A completely free tool developed to monitor the Crash game's WebSocket data stream, capture the crash timing before each round begins, and instantly display it within the tool.",
         soundBtn: "Click to Enable Sound",
+        freeBadge: "100% Free",
     }
 };
 
@@ -49,7 +51,16 @@ function applyLanguage(lang, showLoader = false) {
 
         document.querySelectorAll("[data-key]").forEach(el => {
             const key = el.dataset.key;
-            if (translations[lang][key]) {
+
+            if (!translations[lang][key]) return;
+
+            const icon = el.querySelector("i");
+
+            if (icon) {
+                el.innerHTML = "";
+                el.appendChild(icon);
+                el.append(" " + translations[lang][key]);
+            } else {
                 el.textContent = translations[lang][key];
             }
         });
