@@ -6,7 +6,7 @@ const langSelect = document.getElementById("langSelect");
 const translations = {
     ar: {
         badge: "SECURE TOOLS HUB",
-        title: "ادوات مجانية بالكامل",
+        title: "أدوات مجانية بالكامل",
         subtitle: "في GameHub ستجد جميع أدواتنا المجانية بالكامل التي تتنصت على خوادم منصات المراهنات بشكل احترافي ودقيق مما تساعدك على تحقيق الربح المستمر من هذه المنصات",
         live: "نشط الآن",
         desc1: "أداة مجانية بالكامل تم تطويرها للتنصت على WebSocket لعبة Crash وسحب توقيت الانفجار قبل بداية الجولة وعرضه في الاداة فوراً",
