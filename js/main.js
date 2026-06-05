@@ -115,9 +115,7 @@ if (demoVideo) {
 
     demoVideo.addEventListener("contextmenu", e => e.preventDefault());
 
-    demoVideo.play().catch(() => {
-        bigPlay.classList.remove("hide");
-    });
+
 
     demoVideo.addEventListener("loadedmetadata", () => {
         durationEl.textContent = formatTime(demoVideo.duration);
