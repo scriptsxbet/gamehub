@@ -115,7 +115,13 @@ if (demoVideo) {
 
     demoVideo.addEventListener("contextmenu", e => e.preventDefault());
 
-
+    window.addEventListener("load", () => {
+        demoVideo.play().then(() => {
+            bigPlay.classList.add("hide");
+        }).catch(() => {
+            bigPlay.classList.remove("hide");
+        });
+    });
 
     demoVideo.addEventListener("loadedmetadata", () => {
         durationEl.textContent = formatTime(demoVideo.duration);

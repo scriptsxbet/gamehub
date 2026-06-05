@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/demo_crashup.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preload" as="video" href="https://pub-8919913663d740d5896346aa63518984.r2.dev/demo.mp4" type="video/mp4">
 </head>
 
 <body>
@@ -65,8 +66,9 @@
 
             <div class="custom-video-player" id="customPlayer">
                 <video id="demoVideo" class="demo-video"
-                    src="https://pub-8919913663d740d5896346aa63518984.r2.dev/demo.mp4" preload="none" muted playsinline
-                    webkit-playsinline controlslist="nodownload noplaybackrate" disablepictureinpicture>
+                    src="https://pub-8919913663d740d5896346aa63518984.r2.dev/demo.mp4" preload="auto" autoplay muted
+                    playsinline webkit-playsinline poster="images/demo-poster.jpg"
+                    controlslist="nodownload noplaybackrate" disablepictureinpicture>
                 </video>
 
                 <button class="big-play" id="bigPlay">
