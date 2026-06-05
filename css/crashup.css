@@ -218,7 +218,7 @@
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     background: #000;
 }
 
@@ -542,8 +542,41 @@
     inset: 0;
     z-index: 2;
     pointer-events: none;
+
     background:
-        radial-gradient(circle at center, rgba(0, 0, 0, .12), rgba(0, 0, 0, .30)),
-        linear-gradient(180deg, rgba(0, 0, 0, .12), rgba(0, 0, 0, .52));
-    transition: opacity .3s ease;
+        radial-gradient(circle at center,
+            rgba(0, 0, 0, 0) 10%,
+            rgba(0, 0, 0, .35) 65%,
+            rgba(0, 0, 0, .6) 100%);
+
+    opacity: 1;
+    transition: opacity .35s ease;
+}
+
+/* بمجرد تشغيل الفيديو */
+.custom-video-player.playing::before {
+    opacity: 0;
+}
+
+.video-poster-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background-image: var(--poster);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity .35s ease;
+}
+
+.video-poster-layer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+}
+
+.custom-video-player.playing .video-poster-layer {
+    opacity: 0;
+    visibility: hidden;
 }
