@@ -131,6 +131,11 @@ function updateTutorialVideoByLanguage(lang) {
     if (!video) return;
 
     const newSrc = lang === "ar" ? video.dataset.videoAr : video.dataset.videoEn;
+    const newPoster = lang === "ar" ? video.dataset.posterAr : video.dataset.posterEn;
+
+    if (newPoster) {
+        video.poster = newPoster;
+    }
 
     if (!newSrc || video.src === newSrc) return;
 
