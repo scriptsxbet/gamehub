@@ -498,3 +498,11 @@ html[dir="ltr"] .language-box {
         transform: scale(.8);
     }
 }
+
+.footer .social a,
+.footer .social a:visited,
+.footer .social a:hover,
+.footer .social a:active {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
