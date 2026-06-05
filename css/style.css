@@ -442,3 +442,12 @@ html[dir="ltr"] .language-box {
     object-fit: contain;
     display: block;
 }
+
+.logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo a:visited {
+    color: inherit;
+}
