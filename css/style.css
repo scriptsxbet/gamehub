@@ -63,7 +63,7 @@ body {
 
 .loader-box {
     font-size: 38px;
-    font-weight: 900;
+    font-weight: bold;
     letter-spacing: 1px;
     color: var(--silver);
     animation: pulse 1s infinite alternate;
@@ -111,7 +111,7 @@ body {
 
 .logo {
     font-size: 32px;
-    font-weight: 900;
+    font-weight: bold;
     color: var(--silver);
 }
 
@@ -146,7 +146,7 @@ html[dir="ltr"] .language-box {
     border-radius: 14px;
     background: #0d1524;
     color: var(--silver);
-    font-weight: 900;
+    font-weight: bold;
     cursor: pointer;
     outline: none;
     appearance: none;
@@ -184,7 +184,7 @@ html[dir="ltr"] .language-box {
     border: 1px solid rgba(77, 163, 255, .24);
     color: var(--primary2);
     font-size: 13px;
-    font-weight: 900;
+    font-weight: bold;
     letter-spacing: 1px;
 }
 
@@ -247,7 +247,7 @@ html[dir="ltr"] .language-box {
     padding: 8px 13px;
     border-radius: 999px;
     font-size: 13px;
-    font-weight: 900;
+    font-weight: bold;
     margin-bottom: 16px;
 }
 
@@ -342,7 +342,7 @@ html[dir="ltr"] .language-box {
 
 .soon-content span {
     color: var(--muted);
-    font-weight: 800;
+    font-weight: bold;
 }
 
 .footer {
@@ -505,4 +505,42 @@ html[dir="ltr"] .language-box {
 .footer .social a:active {
     text-decoration: none !important;
     border-bottom: none !important;
+}
+
+.card-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.card-actions .btn {
+    flex: 1;
+    min-width: 0;
+    height: 52px;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.demo-btn {
+    background: transparent;
+    color: var(--primary2);
+    border: 1px solid rgba(125, 211, 252, .35);
+}
+
+.demo-btn:hover {
+    background: rgba(125, 211, 252, .1);
+}
+
+@media (max-width: 420px) {
+    .card-actions {
+        gap: 10px;
+    }
+
+    .card-actions .btn {
+        height: 48px;
+        font-size: 13px;
+        padding: 0 8px;
+    }
 }
