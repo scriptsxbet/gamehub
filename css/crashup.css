@@ -1,0 +1,537 @@
+.tool-hero {
+    width: 100%;
+    padding: 26px 0 16px;
+}
+
+.tool-hero-card {
+    width: min(980px, calc(100% - 28px));
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 28px;
+    background: linear-gradient(180deg, #111722, #0b1119);
+    border: 1px solid rgba(77, 163, 255, .15);
+    border-radius: 24px;
+    box-shadow:
+        inset 0 0 60px rgba(77, 163, 255, .04),
+        0 25px 70px rgba(0, 0, 0, .35);
+}
+
+.tool-hero-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 97%, rgba(77, 163, 255, .04) 100%);
+    background-size: 100% 5px;
+    pointer-events: none;
+}
+
+.scan-line {
+    position: absolute;
+    left: 0;
+    top: -120px;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent, rgba(77, 163, 255, .12), transparent);
+    animation: scan 5s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes scan {
+    to {
+        transform: translateY(700px);
+    }
+}
+
+.hero-left {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.free-badge,
+.hero-online {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.free-badge {
+    background: rgba(77, 163, 255, .08);
+    color: #7dd3fc;
+    border: 1px solid rgba(77, 163, 255, .18);
+}
+
+.free-badge i {
+    font-size: 18px;
+}
+
+.hero-online {
+    background: rgba(49, 233, 129, .08);
+    color: #31e981;
+    border: 1px solid rgba(49, 233, 129, .15);
+}
+
+.hero-online i {
+    font-size: 10px;
+    animation: onlinePulse 1.3s infinite;
+}
+
+@keyframes onlinePulse {
+    50% {
+        opacity: .35;
+        transform: scale(.8);
+    }
+}
+
+.tool-hero h1 {
+    font-size: clamp(36px, 5vw, 54px);
+    margin-bottom: 12px;
+    color: #f5f7fa;
+    letter-spacing: 1px;
+}
+
+.tool-hero p {
+    color: #93a4b8;
+    line-height: 1.75;
+    font-size: 15px;
+    max-width: 850px;
+}
+
+.tool-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.tool-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 13px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .055);
+    border: 1px solid rgba(255, 255, 255, .08);
+    color: #dce7f7;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.tool-meta i {
+    color: #7dd3fc;
+    font-size: 18px;
+}
+
+.tool-meta b {
+    color: #93a4b8;
+    font-weight: bold;
+}
+
+.hero-platforms {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.hero-platforms span {
+    padding: 8px 13px;
+    border-radius: 10px;
+    background: #141d2a;
+    border: 1px solid rgba(255, 255, 255, .05);
+    color: #dce7f7;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .25s;
+}
+
+.hero-platforms span:hover {
+    border-color: #4da3ff;
+    transform: translateY(-2px);
+}
+
+.section-head {
+    width: min(980px, calc(100% - 28px));
+    margin: 0 auto 18px;
+    text-align: center;
+}
+
+.section-head span {
+    display: inline-flex;
+    padding: 8px 14px;
+    margin-bottom: 12px;
+    border-radius: 999px;
+    background: rgba(77, 163, 255, .08);
+    border: 1px solid rgba(77, 163, 255, .18);
+    color: #7dd3fc;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.section-head h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    color: #f5f7fa;
+    margin-bottom: 8px;
+}
+
+.section-head p {
+    color: #93a4b8;
+    font-size: 15px;
+}
+
+.crash-video-section {
+    width: 100%;
+    padding: 34px 0 70px;
+}
+
+.video-frame {
+    width: min(980px, calc(100% - 28px));
+    margin: 0 auto;
+}
+
+.custom-video-player {
+    position: relative;
+    width: 100%;
+    max-width: 980px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(125, 211, 252, .22);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, .42);
+}
+
+.demo-video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    background: #000;
+}
+
+.big-play {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 86px;
+    height: 86px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4da3ff, #7dd3fc);
+    color: #07111f;
+    font-size: 54px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 5;
+    box-shadow:
+        0 0 0 14px rgba(125, 211, 252, .14),
+        0 22px 60px rgba(77, 163, 255, .38);
+    transition: .25s ease;
+}
+
+.big-play.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.big-play:hover {
+    transform: scale(1.08);
+}
+
+.big-play i {
+    transform: translateX(3px);
+}
+
+.video-controls {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    height: 56px;
+    padding: 0 12px;
+    border-radius: 18px;
+    background: rgba(5, 10, 18, .82);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, .1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 6;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: .25s ease;
+}
+
+.custom-video-player:hover .video-controls,
+.custom-video-player.show-controls .video-controls {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.control-btn {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .08);
+    color: #dce7f7;
+    font-size: 22px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.control-btn:hover {
+    background: #4da3ff;
+    color: #07111f;
+}
+
+.progress-box {
+    position: relative;
+    flex: 1;
+    height: 8px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, .16);
+    cursor: pointer;
+    overflow: hidden;
+    direction: ltr;
+}
+
+.progress-loaded {
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, .12);
+}
+
+.progress-bar {
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #4da3ff, #7dd3fc);
+    box-shadow: 0 0 16px rgba(125, 211, 252, .65);
+}
+
+.video-time {
+    color: #dce7f7;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.download-section,
+.support-section {
+    width: 100%;
+    padding: 0 0 34px;
+}
+
+.download-card,
+.support-card {
+    width: min(980px, calc(100% - 28px));
+    margin: 0 auto;
+    padding: 26px;
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 22px;
+    background: linear-gradient(180deg, #111722, #0b1119);
+    border: 1px solid rgba(77, 163, 255, .15);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .32);
+}
+
+.crash-download-icon,
+.crash-support-icon {
+    width: 74px;
+    height: 74px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+}
+
+.crash-download-icon {
+    background: linear-gradient(135deg, #4da3ff, #7dd3fc);
+    color: #07111f;
+}
+
+.crash-support-icon {
+    background: linear-gradient(135deg, #229ed9, #2dd4bf);
+    color: #ffffff;
+}
+
+.crash-download-icon i,
+.crash-support-icon i {
+    display: block;
+    line-height: 1;
+}
+
+.crash-download-icon i::before {
+    font-size: 42px;
+}
+
+.crash-support-icon i::before {
+    font-size: 44px;
+}
+
+.download-content span {
+    color: #7dd3fc;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.download-content h2,
+.support-content h2 {
+    color: #f5f7fa;
+    font-size: 26px;
+    margin: 5px 0 6px;
+}
+
+.download-content p,
+.support-content p {
+    color: #93a4b8;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.download-btn,
+.support-btn {
+    min-width: 210px;
+    height: 54px;
+    padding: 0 22px;
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #07111f;
+    font-size: 15px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #4da3ff, #7dd3fc, #dce7f7);
+    box-shadow: 0 18px 45px rgba(77, 163, 255, .25);
+    transition: .3s ease;
+}
+
+.support-btn {
+    background: linear-gradient(90deg, #2dd4bf, #31e981);
+}
+
+.download-btn:hover,
+.support-btn:hover {
+    transform: translateY(-4px);
+}
+
+.download-btn i::before {
+    font-size: 22px;
+}
+
+.support-btn i::before {
+    font-size: 22px;
+}
+
+@media (max-width: 800px) {
+    .tool-hero {
+        padding: 22px 0 14px;
+    }
+
+    .tool-hero-card {
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .hero-top,
+    .hero-platforms,
+    .tool-meta {
+        justify-content: center;
+    }
+
+    .hero-left {
+        text-align: center;
+    }
+
+    .tool-hero h1 {
+        font-size: 36px;
+    }
+
+    .tool-hero p {
+        font-size: 14px;
+    }
+
+    .crash-video-section {
+        padding: 28px 0 52px;
+    }
+
+    .custom-video-player {
+        border-radius: 18px;
+    }
+
+    .big-play {
+        width: 68px;
+        height: 68px;
+        font-size: 42px;
+    }
+
+    .video-controls {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        height: 52px;
+        gap: 8px;
+        padding: 0 8px;
+        opacity: 1;
+        transform: none;
+    }
+
+    .control-btn {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        font-size: 20px;
+    }
+
+    .video-time {
+        font-size: 11px;
+    }
+
+    .download-card,
+    .support-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 22px;
+    }
+
+    .crash-download-icon,
+    .crash-support-icon {
+        margin: 0 auto;
+    }
+
+    .download-btn,
+    .support-btn {
+        width: 100%;
+        min-width: unset;
+    }
+}

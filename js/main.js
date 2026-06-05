@@ -20,6 +20,20 @@ const translations = {
         crashupDesc: "أداة مجانية بالكامل تم تطويرها للتنصت على WebSocket لعبة Crash وسحب توقيت الانفجار قبل بداية الجولة وعرضه في الاداة فوراً",
         soundBtn: "اضغط لتفعيل الصوت",
         freeBadge: "مجانا بالكامل",
+
+        // CrashUp
+        versionLabel: "الإصدار",
+        fileTypeLabel: "نوع الملف",
+        videoBadge: "شرح كامل",
+        videoTitle: "مشاهدة فيديو الشرح كامل",
+        videoSubtitle: "شاهد طريقة تشغيل الأداة خطوة بخطوة قبل تحميلها.",
+        downloadBadge: "تحميل مباشر",
+        downloadTitle: "تحميل أداة CrashUp APK",
+        downloadDesc: "اضغط على زر التحميل بالأسفل لتحميل ملف الأداة مباشرة على جهازك.",
+        downloadBtn: "تحميل الأداة الآن",
+        supportTitle: "هل تواجه مشكلة في التفعيل؟",
+        supportDesc: "في حال وجود أي مشكلة في التفعيل، تواصل مع فريق الدعم مباشرة على تليجرام.",
+        supportBtn: "تواصل مع الدعم",
     },
     en: {
         badge: "SECURE TOOLS HUB",
@@ -36,6 +50,20 @@ const translations = {
         crashupDesc: "A completely free tool developed to monitor the Crash game's WebSocket data stream, capture the crash timing before each round begins, and instantly display it within the tool.",
         soundBtn: "Click to Enable Sound",
         freeBadge: "100% Free",
+
+        // CrashUp
+        versionLabel: "Version",
+        fileTypeLabel: "File Type",
+        videoBadge: "Full Tutorial",
+        videoTitle: "Watch the Full Tutorial Video",
+        videoSubtitle: "Watch how to use the tool step by step before downloading it.",
+        downloadBadge: "Direct Download",
+        downloadTitle: "Download CrashUp APK",
+        downloadDesc: "Click the button below to download the tool APK directly to your device.",
+        downloadBtn: "Download Tool Now",
+        supportTitle: "Having activation issues?",
+        supportDesc: "If you face any activation problem, contact the support team directly on Telegram.",
+        supportBtn: "Contact Support",
     }
 };
 
@@ -54,16 +82,18 @@ function applyLanguage(lang, showLoader = false) {
 
             if (!translations[lang][key]) return;
 
-            const icon = el.querySelector("i");
+            const icons = [...el.querySelectorAll("i")];
 
-            if (icon) {
+            if (icons.length > 0) {
                 el.innerHTML = "";
-                el.appendChild(icon);
+                icons.forEach(icon => el.appendChild(icon));
                 el.append(" " + translations[lang][key]);
             } else {
                 el.textContent = translations[lang][key];
             }
         });
+
+        updateVideoByLanguage(lang);
 
         langSelect.value = lang;
 
@@ -71,6 +101,31 @@ function applyLanguage(lang, showLoader = false) {
             langLoader.classList.remove("show");
         }
     }, showLoader ? 700 : 0);
+}
+
+function updateVideoByLanguage(lang) {
+    const video = document.getElementById("demoVideo");
+    const progressBar = document.getElementById("progressBar");
+    const currentTimeEl = document.getElementById("currentTime");
+    const durationEl = document.getElementById("duration");
+    const bigPlay = document.getElementById("bigPlay");
+    const playPause = document.getElementById("playPause");
+
+    if (!video) return;
+
+    const newSrc = lang === "ar" ? video.dataset.videoAr : video.dataset.videoEn;
+
+    if (!newSrc || video.src === newSrc) return;
+
+    video.pause();
+    video.src = newSrc;
+    video.load();
+
+    if (progressBar) progressBar.style.width = "0%";
+    if (currentTimeEl) currentTimeEl.textContent = "0:00";
+    if (durationEl) durationEl.textContent = "0:00";
+    if (bigPlay) bigPlay.classList.remove("hide");
+    if (playPause) playPause.innerHTML = "<i class='bx bx-play'></i>";
 }
 
 window.addEventListener("load", () => {
@@ -121,7 +176,7 @@ function formatTime(time) {
 }
 
 if (demoVideo) {
-    demoVideo.muted = true;
+    demoVideo.muted = false;
     demoVideo.controls = false;
 
     demoVideo.addEventListener("contextmenu", e => e.preventDefault());

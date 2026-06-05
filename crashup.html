@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CrashUp Free 100% | GameHub</title>
+
     <link rel="icon" type="image/png" href="img/favicon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,6 +15,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/crashup.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
@@ -30,7 +33,9 @@
     </div>
 
     <header class="header reveal">
-        <div class="logo"><a href="/">GameHub</a></div>
+        <div class="logo">
+            <a href="/">GameHub</a>
+        </div>
 
         <div class="language-box">
             <select id="langSelect" class="lang-select">
@@ -41,10 +46,152 @@
         </div>
     </header>
 
+    <section class="tool-hero reveal">
+        <div class="tool-hero-card">
 
-    <!-- التصميم هنا -->
+            <div class="scan-line"></div>
 
+            <div class="hero-left">
 
+                <div class="hero-top">
+                    <span class="free-badge" data-key="freeBadge">
+                        <i class='bx bx-gift'></i>
+                        مجانا بالكامل
+                    </span>
+
+                    <span class="hero-online" data-key="live">
+                        <i class='bx bxs-circle'></i>
+                        نشط الآن
+                    </span>
+                </div>
+
+                <h1>CrashUp</h1>
+
+                <p data-key="crashupDesc">
+                    أداة مجانية بالكامل تم تطويرها للتنصت على WebSocket لعبة Crash وسحب توقيت الانفجار قبل بداية الجولة
+                    وعرضه في الاداة فوراً
+                </p>
+
+                <div class="tool-meta">
+                    <span>
+                        <i class='bx bx-code-alt'></i>
+                        <b data-key="versionLabel">الإصدار</b>
+                        V1.6.2
+                    </span>
+
+                    <span>
+                        <i class='bx bxl-android'></i>
+                        <b data-key="fileTypeLabel">نوع الملف</b>
+                        APK
+                    </span>
+                </div>
+
+                <div class="hero-platforms">
+                    <span>1xBet</span>
+                    <span>Melbet</span>
+                    <span>Linebet</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="crash-video-section reveal">
+        <div class="section-head">
+            <span data-key="videoBadge">شرح كامل</span>
+            <h2 data-key="videoTitle">مشاهدة فيديو الشرح كامل</h2>
+            <p data-key="videoSubtitle">
+                شاهد طريقة تشغيل الأداة خطوة بخطوة قبل تحميلها.
+            </p>
+        </div>
+
+        <div class="video-frame">
+
+            <div class="custom-video-player" id="customPlayer">
+                <video id="demoVideo" class="demo-video"
+                    data-video-ar="https://pub-8919913663d740d5896346aa63518984.r2.dev/crashup-video.mp4"
+                    data-video-en="https://pub-8919913663d740d5896346aa63518984.r2.dev/crashup-video-en.mp4"
+                    preload="metadata" playsinline webkit-playsinline controlslist="nodownload noplaybackrate"
+                    disablepictureinpicture>
+                </video>
+
+                <button class="big-play" id="bigPlay" aria-label="Play video">
+                    <i class='bx bx-play'></i>
+                </button>
+
+                <div class="video-controls">
+                    <button id="playPause" class="control-btn" aria-label="Play or pause">
+                        <i class='bx bx-play'></i>
+                    </button>
+
+                    <div class="progress-box" id="progressBox">
+                        <div class="progress-loaded"></div>
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+
+                    <span class="video-time">
+                        <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+                    </span>
+
+                    <button id="muteBtn" class="control-btn" aria-label="Mute or unmute">
+                        <i class='bx bx-volume-full'></i>
+                    </button>
+
+                    <button id="fullScreenBtn" class="control-btn" aria-label="Fullscreen">
+                        <i class='bx bx-fullscreen'></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="download-section reveal">
+        <div class="download-card">
+
+            <div class="crash-download-icon">
+                <i class='bx bxl-android'></i>
+            </div>
+
+            <div class="download-content">
+                <span data-key="downloadBadge">تحميل مباشر</span>
+                <h2 data-key="downloadTitle">تحميل أداة CrashUp APK</h2>
+                <p data-key="downloadDesc">
+                    اضغط على زر التحميل بالأسفل لتحميل ملف الأداة مباشرة على جهازك.
+                </p>
+            </div>
+
+            <a class="download-btn" href="https://pub-8919913663d740d5896346aa63518984.r2.dev/crashup_tool.apk"
+                download>
+                <i class='bx bx-download'></i>
+                <span data-key="downloadBtn">تحميل الأداة الآن</span>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="support-section reveal">
+        <div class="support-card">
+
+            <div class="crash-support-icon">
+                <i class='bx bxl-telegram'></i>
+            </div>
+
+            <div class="support-content">
+                <h2 data-key="supportTitle">هل تواجه مشكلة في التفعيل؟</h2>
+                <p data-key="supportDesc">
+                    في حال وجود أي مشكلة في التفعيل، تواصل مع فريق الدعم مباشرة على تليجرام.
+                </p>
+            </div>
+
+            <a class="support-btn" href="https://t.me/KIRASCRIPT" target="_blank" rel="noopener noreferrer">
+                <i class='bx bxl-telegram'></i>
+                <span data-key="supportBtn">تواصل مع الدعم</span>
+            </a>
+
+        </div>
+    </section>
 
     <footer class="footer reveal">
         <div class="social">
