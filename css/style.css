@@ -271,6 +271,7 @@ html[dir="ltr"] .language-box {
 .card h2 {
     font-size: 26px;
     margin-bottom: 12px;
+    margin-top: 12px;
 }
 
 .card p {
@@ -303,7 +304,7 @@ html[dir="ltr"] .language-box {
     place-items: center;
     text-decoration: none;
     color: #07111f;
-    font-weight: 900;
+    font-weight: bold;
     background: linear-gradient(90deg, var(--primary), var(--primary2));
     transition: .3s ease;
 }
@@ -450,4 +451,50 @@ html[dir="ltr"] .language-box {
 
 .logo a:visited {
     color: inherit;
+}
+
+.hero-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.free-badge,
+.hero-online {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.free-badge {
+    background: rgba(77, 163, 255, .08);
+    color: #7dd3fc;
+    border: 1px solid rgba(77, 163, 255, .18);
+}
+
+.free-badge i {
+    font-size: 18px;
+}
+
+.hero-online {
+    background: rgba(49, 233, 129, .08);
+    color: #31e981;
+    border: 1px solid rgba(49, 233, 129, .15);
+}
+
+.hero-online i {
+    font-size: 10px;
+    animation: onlinePulse 1.3s infinite;
+}
+
+@keyframes onlinePulse {
+    50% {
+        opacity: .35;
+        transform: scale(.8);
+    }
 }
