@@ -104,12 +104,16 @@ function applyLanguage(lang, showLoader = false) {
 }
 
 function updateVideoByLanguage(lang) {
-    const video = document.getElementById("demoVideo");
-    const progressBar = document.getElementById("progressBar");
-    const currentTimeEl = document.getElementById("currentTime");
-    const durationEl = document.getElementById("duration");
-    const bigPlay = document.getElementById("bigPlay");
-    const playPause = document.getElementById("playPause");
+    updateTutorialVideoByLanguage(lang);
+}
+
+function updateTutorialVideoByLanguage(lang) {
+    const video = document.getElementById("tutorialVideo");
+    const progressBar = document.getElementById("tutorialProgressBar");
+    const currentTimeEl = document.getElementById("tutorialCurrentTime");
+    const durationEl = document.getElementById("tutorialDuration");
+    const bigPlay = document.getElementById("tutorialBigPlay");
+    const playPause = document.getElementById("tutorialPlayPause");
 
     if (!video) return;
 
@@ -176,7 +180,7 @@ function formatTime(time) {
 }
 
 if (demoVideo) {
-    demoVideo.muted = false;
+    demoVideo.muted = true;
     demoVideo.controls = false;
 
     demoVideo.addEventListener("contextmenu", e => e.preventDefault());
@@ -291,5 +295,98 @@ if (demoVideo && soundBtn) {
         if (muteBtn) {
             muteBtn.innerHTML = "<i class='bx bx-volume-full'></i>";
         }
+    });
+}
+
+
+// Tutorial Video - CrashUp Page
+const tutorialPlayer = document.getElementById("tutorialPlayer");
+const tutorialVideo = document.getElementById("tutorialVideo");
+const tutorialBigPlay = document.getElementById("tutorialBigPlay");
+const tutorialPlayPause = document.getElementById("tutorialPlayPause");
+const tutorialMuteBtn = document.getElementById("tutorialMuteBtn");
+const tutorialFullScreenBtn = document.getElementById("tutorialFullScreenBtn");
+const tutorialProgressBox = document.getElementById("tutorialProgressBox");
+const tutorialProgressBar = document.getElementById("tutorialProgressBar");
+const tutorialCurrentTimeEl = document.getElementById("tutorialCurrentTime");
+const tutorialDurationEl = document.getElementById("tutorialDuration");
+
+if (tutorialVideo) {
+    tutorialVideo.muted = false;
+    tutorialVideo.volume = 1;
+    tutorialVideo.controls = false;
+
+    tutorialVideo.addEventListener("contextmenu", e => e.preventDefault());
+
+    tutorialVideo.addEventListener("loadedmetadata", () => {
+        tutorialDurationEl.textContent = formatTime(tutorialVideo.duration);
+    });
+
+    tutorialVideo.addEventListener("timeupdate", () => {
+        const percent = (tutorialVideo.currentTime / tutorialVideo.duration) * 100;
+        tutorialProgressBar.style.width = `${percent}%`;
+        tutorialCurrentTimeEl.textContent = formatTime(tutorialVideo.currentTime);
+    });
+
+    function toggleTutorialPlay() {
+        tutorialVideo.paused ? tutorialVideo.play() : tutorialVideo.pause();
+    }
+
+    tutorialBigPlay.addEventListener("click", toggleTutorialPlay);
+    tutorialPlayPause.addEventListener("click", toggleTutorialPlay);
+    tutorialVideo.addEventListener("click", toggleTutorialPlay);
+
+    tutorialVideo.addEventListener("play", () => {
+        tutorialBigPlay.classList.add("hide");
+        tutorialPlayPause.innerHTML = "<i class='bx bx-pause'></i>";
+    });
+
+    tutorialVideo.addEventListener("pause", () => {
+        tutorialBigPlay.classList.remove("hide");
+        tutorialPlayPause.innerHTML = "<i class='bx bx-play'></i>";
+    });
+
+    tutorialMuteBtn.addEventListener("click", () => {
+        tutorialVideo.muted = !tutorialVideo.muted;
+        tutorialMuteBtn.innerHTML = tutorialVideo.muted
+            ? "<i class='bx bx-volume-mute'></i>"
+            : "<i class='bx bx-volume-full'></i>";
+    });
+
+    tutorialProgressBox.addEventListener("click", e => {
+        const rect = tutorialProgressBox.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const percent = clickX / rect.width;
+        tutorialVideo.currentTime = percent * tutorialVideo.duration;
+    });
+
+    tutorialFullScreenBtn.addEventListener("click", () => {
+        if (document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
+            if (document.exitFullscreen) document.exitFullscreen();
+            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+            else if (document.msExitFullscreen) document.msExitFullscreen();
+        } else {
+            if (tutorialPlayer.requestFullscreen) tutorialPlayer.requestFullscreen();
+            else if (tutorialPlayer.webkitRequestFullscreen) tutorialPlayer.webkitRequestFullscreen();
+            else if (tutorialPlayer.msRequestFullscreen) tutorialPlayer.msRequestFullscreen();
+            else if (tutorialVideo.webkitEnterFullscreen) tutorialVideo.webkitEnterFullscreen();
+        }
+    });
+
+    let tutorialControlsTimer;
+
+    tutorialPlayer.addEventListener("mousemove", () => {
+        tutorialPlayer.classList.add("show-controls");
+        clearTimeout(tutorialControlsTimer);
+
+        tutorialControlsTimer = setTimeout(() => {
+            if (!tutorialVideo.paused) {
+                tutorialPlayer.classList.remove("show-controls");
+            }
+        }, 2200);
+    });
+
+    tutorialPlayer.addEventListener("touchstart", () => {
+        tutorialPlayer.classList.toggle("show-controls");
     });
 }
