@@ -7,13 +7,13 @@ const translations = {
     ar: {
         badge: "SECURE TOOLS HUB",
         title: "أدوات مجانية بالكامل",
-        subtitle: "في GameHub ستجد جميع أدواتنا المجانية بالكامل التي تتنصت على خوادم منصات المراهنات بشكل احترافي ودقيق مما تساعدك على تحقيق الربح المستمر من هذه المنصات",
+        subtitle: "في VexPlay ستجد جميع أدواتنا المجانية بالكامل التي تتنصت على خوادم منصات المراهنات بشكل احترافي ودقيق مما تساعدك على تحقيق الربح المستمر من هذه المنصات",
         live: "نشط الآن",
         desc1: "أداة مجانية بالكامل تم تطويرها للتنصت على WebSocket لعبة Crash وسحب توقيت الانفجار قبل بداية الجولة وعرضه في الاداة فوراً",
         desc2: "ماسح بيانات ذكي لعرض حالة المنصات والقراءات.",
         details: "تفاصيل أكثر",
         soon: "قريبًا",
-        footer: "© 2026 GameHub. جميع الحقوق محفوظة.",
+        footer: "© 2026 VexPlay. جميع الحقوق محفوظة.",
         loading: "جاري تغيير اللغة",
         // Demo
         watchFull: "مشاهدة الشرح كامل وتحميل الأداة",
@@ -38,12 +38,12 @@ const translations = {
     en: {
         badge: "SECURE TOOLS HUB",
         title: "100% Free Tools",
-        subtitle: "At GameHub, you'll find a complete collection of free tools designed to professionally and accurately monitor betting platform servers, helping you maximize your opportunities for consistent profits.", live: "Active Now",
+        subtitle: "At VexPlay, you'll find a complete collection of free tools designed to professionally and accurately monitor betting platform servers, helping you maximize your opportunities for consistent profits.", live: "Active Now",
         desc1: "A completely free tool developed to monitor the Crash game's WebSocket data stream, capture the crash timing before each round begins, and instantly display it within the tool.",
         desc2: "A smart data scanner for platform status and readings.",
         details: "More Details",
         soon: "Coming Soon",
-        footer: "© 2026 GameHub. All rights reserved.",
+        footer: "© 2026 VexPlay. All rights reserved.",
         loading: "Changing language",
         // Demo
         watchFull: "Watch Full Tutorial & Download Tool",
