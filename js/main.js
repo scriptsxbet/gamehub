@@ -408,3 +408,28 @@ if (tutorialVideo) {
         tutorialPlayer.classList.toggle("show-controls");
     });
 }
+
+// ScrollUp
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+function toggleScrollTopBtn() {
+    if (!scrollTopBtn) return;
+
+    if (window.scrollY > 80) {
+        scrollTopBtn.classList.add("show");
+    } else {
+        scrollTopBtn.classList.remove("show");
+    }
+}
+
+if (scrollTopBtn) {
+    window.addEventListener("scroll", toggleScrollTopBtn);
+    window.addEventListener("load", toggleScrollTopBtn);
+
+    scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
