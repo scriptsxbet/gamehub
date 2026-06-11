@@ -103,7 +103,7 @@ function applyLanguage(lang, showLoader = false) {
         if (telegramLink && youtubeLink) {
             if (lang === "ar") {
                 telegramLink.href = "https://t.me/vexplayvip";
-                youtubeLink.href = "https://www.youtube.com/@kira-xbet";
+                youtubeLink.href = "https://www.youtube.com/@VexPlayVip";
             } else {
                 telegramLink.href = "https://t.me/crashupfree";
                 youtubeLink.href = "https://www.youtube.com/@kiramods-one";
