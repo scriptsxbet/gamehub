@@ -106,7 +106,7 @@ function applyLanguage(lang, showLoader = false) {
                 youtubeLink.href = "https://www.youtube.com/@VexPlayVip";
             } else {
                 telegramLink.href = "https://t.me/crashupfree";
-                youtubeLink.href = "https://www.youtube.com/@kiramods-one";
+                youtubeLink.href = "https://www.youtube.com/@VEXMODS-ONE";
             }
         }
 
