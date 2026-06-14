@@ -67,6 +67,11 @@ const translations = {
     }
 };
 
+let pageFullyLoaded = false;
+let videoCanLoad = false;
+
+
+
 function applyLanguage(lang, showLoader = false) {
     if (showLoader) {
         langLoaderText.textContent = translations[lang].loading;
@@ -93,7 +98,9 @@ function applyLanguage(lang, showLoader = false) {
             }
         });
 
-        updateVideoByLanguage(lang);
+        if (videoCanLoad) {
+            updateVideoByLanguage(lang);
+        }
 
         langSelect.value = lang;
 
@@ -162,6 +169,15 @@ window.addEventListener("load", () => {
             setTimeout(() => el.classList.add("show"), 420 + i * 170);
         });
     }, 550);
+});
+
+window.addEventListener("load", () => {
+    pageFullyLoaded = true;
+
+    setTimeout(() => {
+        videoCanLoad = true;
+        updateVideoByLanguage(localStorage.getItem("siteLang") || "ar");
+    }, 1200);
 });
 
 function changeLanguage(lang) {
