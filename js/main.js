@@ -201,6 +201,7 @@ const muteBtn = document.getElementById("muteBtn");
 const fullScreenBtn = document.getElementById("fullScreenBtn");
 const progressBox = document.getElementById("progressBox");
 const progressBar = document.getElementById("progressBar");
+const progressThumb = document.getElementById("progressThumb");
 const currentTimeEl = document.getElementById("currentTime");
 const durationEl = document.getElementById("duration");
 
@@ -220,11 +221,18 @@ if (demoVideo) {
     demoVideo.addEventListener("contextmenu", e => e.preventDefault());
 
     window.addEventListener("load", () => {
-        demoVideo.play().then(() => {
-            bigPlay.classList.add("hide");
-        }).catch(() => {
-            bigPlay.classList.remove("hide");
-        });
+        setTimeout(() => {
+            if (!demoVideo.dataset.src) return;
+
+            demoVideo.src = demoVideo.dataset.src;
+            demoVideo.load();
+
+            demoVideo.play().then(() => {
+                bigPlay.classList.add("hide");
+            }).catch(() => {
+                bigPlay.classList.remove("hide");
+            });
+        }, 1200);
     });
 
     demoVideo.addEventListener("loadedmetadata", () => {
@@ -233,7 +241,13 @@ if (demoVideo) {
 
     demoVideo.addEventListener("timeupdate", () => {
         const percent = (demoVideo.currentTime / demoVideo.duration) * 100;
+
         progressBar.style.width = `${percent}%`;
+
+        if (progressThumb) {
+            progressThumb.style.left = `${percent}%`;
+        }
+
         currentTimeEl.textContent = formatTime(demoVideo.currentTime);
     });
 
@@ -315,6 +329,51 @@ if (demoVideo) {
     customPlayer.addEventListener("touchstart", () => {
         customPlayer.classList.toggle("show-controls");
     });
+    let isDraggingDemoProgress = false;
+
+    function updateDemoSeek(clientX) {
+        const rect = progressBox.getBoundingClientRect();
+
+        let percent = (clientX - rect.left) / rect.width;
+        percent = Math.max(0, Math.min(1, percent));
+
+        demoVideo.currentTime = percent * demoVideo.duration;
+
+        progressBar.style.width = `${percent * 100}%`;
+
+        if (progressThumb) {
+            progressThumb.style.left = `${percent * 100}%`;
+        }
+    }
+
+    if (progressThumb) {
+        progressThumb.addEventListener("mousedown", e => {
+            isDraggingDemoProgress = true;
+            e.preventDefault();
+        });
+
+        document.addEventListener("mousemove", e => {
+            if (!isDraggingDemoProgress) return;
+            updateDemoSeek(e.clientX);
+        });
+
+        document.addEventListener("mouseup", () => {
+            isDraggingDemoProgress = false;
+        });
+
+        progressThumb.addEventListener("touchstart", () => {
+            isDraggingDemoProgress = true;
+        }, { passive: true });
+
+        document.addEventListener("touchmove", e => {
+            if (!isDraggingDemoProgress) return;
+            updateDemoSeek(e.touches[0].clientX);
+        }, { passive: true });
+
+        document.addEventListener("touchend", () => {
+            isDraggingDemoProgress = false;
+        });
+    }
 }
 
 const soundBtn = document.getElementById("soundBtn");

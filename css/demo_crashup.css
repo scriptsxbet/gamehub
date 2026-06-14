@@ -550,3 +550,41 @@ html[dir="ltr"] .scroll-top-btn {
         font-size: 28px;
     }
 }
+
+.progress-box {
+    position: relative;
+    flex: 1;
+    height: 8px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, .16);
+    cursor: pointer;
+    overflow: visible;
+    direction: ltr;
+}
+
+.progress-thumb {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 3px solid #4da3ff;
+    box-shadow:
+        0 0 15px rgba(77, 163, 255, .5),
+        0 0 0 4px rgba(77, 163, 255, .15);
+    transform: translate(-50%, -50%);
+    cursor: grab;
+    z-index: 10;
+    transition: transform .15s ease;
+}
+
+.progress-thumb:hover {
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
+.progress-thumb:active {
+    cursor: grabbing;
+    transform: translate(-50%, -50%) scale(1.2);
+}
