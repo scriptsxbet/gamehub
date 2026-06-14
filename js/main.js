@@ -326,6 +326,7 @@ const tutorialMuteBtn = document.getElementById("tutorialMuteBtn");
 const tutorialFullScreenBtn = document.getElementById("tutorialFullScreenBtn");
 const tutorialProgressBox = document.getElementById("tutorialProgressBox");
 const tutorialProgressBar = document.getElementById("tutorialProgressBar");
+const tutorialProgressThumb = document.getElementById("tutorialProgressThumb");
 const tutorialCurrentTimeEl = document.getElementById("tutorialCurrentTime");
 const tutorialDurationEl = document.getElementById("tutorialDuration");
 
@@ -343,6 +344,10 @@ if (tutorialVideo) {
     tutorialVideo.addEventListener("timeupdate", () => {
         const percent = (tutorialVideo.currentTime / tutorialVideo.duration) * 100;
         tutorialProgressBar.style.width = `${percent}%`;
+
+        if (tutorialProgressThumb) {
+            tutorialProgressThumb.style.left = `${percent}%`;
+        }
         tutorialCurrentTimeEl.textContent = formatTime(tutorialVideo.currentTime);
     });
 
@@ -407,6 +412,54 @@ if (tutorialVideo) {
     tutorialPlayer.addEventListener("touchstart", () => {
         tutorialPlayer.classList.toggle("show-controls");
     });
+
+    let isDraggingProgress = false;
+
+    function updateTutorialSeek(clientX) {
+        const rect = tutorialProgressBox.getBoundingClientRect();
+
+        let percent = (clientX - rect.left) / rect.width;
+
+        percent = Math.max(0, Math.min(1, percent));
+
+        tutorialVideo.currentTime = percent * tutorialVideo.duration;
+
+        tutorialProgressBar.style.width = `${percent * 100}%`;
+
+        if (tutorialProgressThumb) {
+            tutorialProgressThumb.style.left = `${percent * 100}%`;
+        }
+    }
+    tutorialProgressThumb.addEventListener("mousedown", e => {
+        isDraggingProgress = true;
+        e.preventDefault();
+    });
+
+    document.addEventListener("mousemove", e => {
+        if (!isDraggingProgress) return;
+
+        updateTutorialSeek(e.clientX);
+    });
+
+    document.addEventListener("mouseup", () => {
+        isDraggingProgress = false;
+    });
+
+    tutorialProgressThumb.addEventListener("touchstart", () => {
+        isDraggingProgress = true;
+    }, { passive: true });
+
+    document.addEventListener("touchmove", e => {
+        if (!isDraggingProgress) return;
+
+        updateTutorialSeek(e.touches[0].clientX);
+    }, { passive: true });
+
+    document.addEventListener("touchend", () => {
+        isDraggingProgress = false;
+    });
+
+
 }
 
 // ScrollUp
