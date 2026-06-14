@@ -550,3 +550,32 @@ html[dir="ltr"] .scroll-top-btn {
         font-size: 28px;
     }
 }
+
+/* Mobile only: خلي فيديو الديمو بالطول */
+@media (max-width: 600px) {
+    .demo-frame {
+        width: min(430px, calc(100% - 20px));
+    }
+
+    .custom-video-player {
+        aspect-ratio: 9 / 14;
+        max-height: 78vh;
+        border-radius: 18px;
+    }
+
+    .demo-video {
+        object-fit: contain;
+    }
+
+    .progress-box {
+        overflow: visible;
+        direction: ltr;
+    }
+}
+
+/* Tablet + Desktop: يفضل بالعرض */
+@media (min-width: 601px) {
+    .custom-video-player {
+        aspect-ratio: 16 / 9;
+    }
+}
