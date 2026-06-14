@@ -9,7 +9,7 @@ const translations = {
         title: "أدوات مجانية بالكامل",
         subtitle: "في VexPlay ستجد جميع أدواتنا المجانية بالكامل التي تتنصت على خوادم منصات المراهنات بشكل احترافي ودقيق مما تساعدك على تحقيق الربح المستمر من هذه المنصات",
         live: "نشط الآن",
-        desc1: "أداة مجانية بالكامل تم تطويرها للتنصت على WebSocket لعبة Crash وسحب توقيت الانفجار قبل بداية الجولة وعرضه في الاداة فوراً",
+        desc1: "أداة مجانية بالكامل تم تطويرها للتنصت على WebSocket لعبة Crash وسحب توقيت الانفجار قبل بداية الجولة وعرضه في الاسكربت  فوراً",
         desc2: "ماسح بيانات ذكي لعرض حالة المنصات والقراءات.",
         details: "تفاصيل أكثر",
         soon: "قريبًا",
@@ -17,18 +17,18 @@ const translations = {
         loading: "جاري تغيير اللغة",
         // Demo
         watchFull: "مشاهدة الشرح كامل وتحميل الأداة",
-        crashupDesc: "أداة مجانية بالكامل تم تطويرها للتنصت على WebSocket لعبة Crash وسحب توقيت الانفجار قبل بداية الجولة وعرضه في الاداة فوراً",
+        CRASHUPDesc: "أداة مجانية بالكامل تم تطويرها للتنصت على WebSocket لعبة Crash وسحب توقيت الانفجار قبل بداية الجولة وعرضه في الاسكربت  فوراً",
         soundBtn: "اضغط لتفعيل الصوت",
         freeBadge: "مجانا بالكامل",
 
-        // CrashUp
+        // CRASHUP
         versionLabel: "الإصدار",
         fileTypeLabel: "نوع الملف",
         videoBadge: "شرح كامل",
         videoTitle: "مشاهدة فيديو الشرح كامل",
         videoSubtitle: "شاهد طريقة تشغيل الأداة خطوة بخطوة قبل تحميلها.",
         downloadBadge: "تحميل مباشر",
-        downloadTitle: "تحميل أداة CrashUp APK",
+        downloadTitle: "تحميل أداة CRASHUP APK",
         downloadDesc: "اضغط على زر التحميل بالأسفل لتحميل ملف الأداة مباشرة على جهازك.",
         downloadBtn: "تحميل الأداة الآن",
         supportTitle: "هل تواجه مشكلة في التفعيل؟",
@@ -47,18 +47,18 @@ const translations = {
         loading: "Changing language",
         // Demo
         watchFull: "Watch Full Tutorial & Download Tool",
-        crashupDesc: "A completely free tool developed to monitor the Crash game's WebSocket data stream, capture the crash timing before each round begins, and instantly display it within the tool.",
+        CRASHUPDesc: "A completely free tool developed to monitor the Crash game's WebSocket data stream, capture the crash timing before each round begins, and instantly display it within the tool.",
         soundBtn: "Click to Enable Sound",
         freeBadge: "100% Free",
 
-        // CrashUp
+        // CRASHUP
         versionLabel: "Version",
         fileTypeLabel: "File Type",
         videoBadge: "Full Tutorial",
         videoTitle: "Watch the Full Tutorial Video",
         videoSubtitle: "Watch how to use the tool step by step before downloading it.",
         downloadBadge: "Direct Download",
-        downloadTitle: "Download CrashUp APK",
+        downloadTitle: "Download CRASHUP APK",
         downloadDesc: "Click the button below to download the tool APK directly to your device.",
         downloadBtn: "Download Tool Now",
         supportTitle: "Having activation issues?",
@@ -112,7 +112,7 @@ function applyLanguage(lang, showLoader = false) {
                 telegramLink.href = "https://t.me/vexplayvip";
                 youtubeLink.href = "https://www.youtube.com/@VexPlayVip";
             } else {
-                telegramLink.href = "https://t.me/crashupfree";
+                telegramLink.href = "https://t.me/CRASHUPfree";
                 youtubeLink.href = "https://www.youtube.com/@VEXMODS-ONE";
             }
         }
@@ -334,7 +334,7 @@ if (demoVideo && soundBtn) {
 }
 
 
-// Tutorial Video - CrashUp Page
+// Tutorial Video - CRASHUP Page
 const tutorialPlayer = document.getElementById("tutorialPlayer");
 const tutorialVideo = document.getElementById("tutorialVideo");
 const tutorialBigPlay = document.getElementById("tutorialBigPlay");
