@@ -12,9 +12,11 @@ const translations = {
         desc1: "أداة مجانية بالكامل تم تطويرها للتنصت على WebSocket لعبة Crash وسحب توقيت الانفجار قبل بداية الجولة وعرضه في الاسكربت  فوراً",
         desc2: "ماسح بيانات ذكي لعرض حالة المنصات والقراءات.",
         details: "تفاصيل أكثر",
+        script_feature: "مميزات الاسكربت",
         soon: "قريبًا",
         footer: "© 2026 VexPlay. جميع الحقوق محفوظة.",
         loading: "جاري تغيير اللغة",
+
         // Demo
         watchFull: "مشاهدة الشرح كامل وتحميل الأداة",
         CRASHUPDesc: "أداة مجانية بالكامل تم تطويرها للتنصت على WebSocket لعبة Crash وسحب توقيت الانفجار قبل بداية الجولة وعرضه في الاسكربت  فوراً",
@@ -42,6 +44,7 @@ const translations = {
         desc1: "A completely free tool developed to monitor the Crash game's WebSocket data stream, capture the crash timing before each round begins, and instantly display it within the tool.",
         desc2: "A smart data scanner for platform status and readings.",
         details: "More Details",
+        script_feature: "Script Features",
         soon: "Coming Soon",
         footer: "© 2026 VexPlay. All rights reserved.",
         loading: "Changing language",
