@@ -108,41 +108,42 @@
     <section class="demo-section reveal">
         <div class="demo-frame">
 
-            <div class="custom-video-player" id="customPlayer">
-                <video id="demoVideo" class="demo-video"
-                    src="https://pub-8919913663d740d5896346aa63518984.r2.dev/demo.mp4" preload="metadata" muted
-                    playsinline webkit-playsinline controlslist="nodownload noplaybackrate" disablepictureinpicture>
+            <div class="demo-promo-player" id="demoPromoPlayer">
+                <video id="demoPromoVideo" class="demo-promo-video"
+                    src="https://pub-8919913663d740d5896346aa63518984.r2.dev/crashup-demo/script-test.mp4"
+                    preload="metadata" muted playsinline webkit-playsinline controlslist="nodownload noplaybackrate"
+                    disablepictureinpicture>
                 </video>
 
-                <button class="big-play" id="bigPlay">
+                <button class="demo-promo-big-play" id="demoPromoBigPlay">
                     <i class='bx bx-play'></i>
                 </button>
 
-                <button class="sound-btn" id="soundBtn">
+                <button class="demo-promo-sound-btn" id="demoPromoSoundBtn">
                     <i class='bx bx-volume-full'></i>
                     <span data-key="soundBtn">اضغط لتفعيل الصوت</span>
                 </button>
 
-                <div class="video-controls">
-                    <button id="playPause" class="control-btn">
+                <div class="demo-promo-controls">
+                    <button id="demoPromoPlayPause" class="demo-promo-control-btn">
                         <i class='bx bx-play'></i>
                     </button>
 
-                    <div class="progress-box" id="progressBox">
-                        <div class="progress-loaded"></div>
-                        <div class="progress-bar" id="progressBar"></div>
-                        <div class="progress-thumb" id="progressThumb"></div>
+                    <div class="demo-promo-progress-box" id="demoPromoProgressBox">
+                        <div class="demo-promo-progress-loaded"></div>
+                        <div class="demo-promo-progress-bar" id="demoPromoProgressBar"></div>
+                        <div class="demo-promo-progress-thumb" id="demoPromoProgressThumb"></div>
                     </div>
 
-                    <span class="video-time">
-                        <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+                    <span class="demo-promo-time">
+                        <span id="demoPromoCurrentTime">0:00</span> / <span id="demoPromoDuration">0:00</span>
                     </span>
 
-                    <button id="muteBtn" class="control-btn">
+                    <button id="demoPromoMuteBtn" class="demo-promo-control-btn">
                         <i class='bx bx-volume-mute'></i>
                     </button>
 
-                    <button id="fullScreenBtn" class="control-btn">
+                    <button id="demoPromoFullScreenBtn" class="demo-promo-control-btn">
                         <i class='bx bx-fullscreen'></i>
                     </button>
                 </div>
@@ -153,33 +154,163 @@
                 <i class='bx bx-download'></i>
             </a>
 
-        </div>
-    </section>
+            <section class="faq-video-section reveal">
+                <div class="faq-head">
+                    <span data-key="faqBadge">FAQ</span>
+                    <h2 data-key="faqTitle">الأسئلة الشائعة</h2>
+                    <p data-key="faqSubtitle">اضغط على أي سؤال لمشاهدة شرح الفيديو.</p>
+                </div>
+
+                <div class="faq-list">
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">
+                            <span data-key="faqQ1">ما الفرق بين الباقات؟</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p class="faq-desc" data-key="faqDesc1"></p>
+
+                            <div class="faq-video-player">
+                                <video class="faq-video" poster="img/crashup-demo/plans.png" preload="metadata"
+                                    playsinline webkit-playsinline controlslist="nodownload noplaybackrate"
+                                    disablepictureinpicture>
+                                    <source
+                                        src="https://pub-8919913663d740d5896346aa63518984.r2.dev/crashup-demo/plans-feed-differences.mp4"
+                                        type="video/mp4">
+                                </video>
+
+                                <button class="faq-big-play" type="button"><i class='bx bx-play'></i></button>
+
+                                <div class="faq-controls">
+                                    <button class="faq-play-toggle" type="button"><i class='bx bx-play'></i></button>
+                                    <div class="faq-progress-box">
+                                        <div class="faq-progress-bar"></div>
+                                        <div class="faq-progress-thumb"></div>
+                                    </div>
+                                    <span class="faq-time"><span class="faq-current">0:00</span> / <span
+                                            class="faq-duration">0:00</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">
+                            <span data-key="faqQ2">حل مشكلة عدم تشغيل الاسكربت؟</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p class="faq-desc" data-key="faqDesc2"></p>
+
+                            <div class="faq-video-player">
+                                <video class="faq-video" poster="img/crashup-demo/fix.png" preload="metadata"
+                                    playsinline webkit-playsinline controlslist="nodownload noplaybackrate"
+                                    disablepictureinpicture>
+                                    <source
+                                        src="https://pub-8919913663d740d5896346aa63518984.r2.dev/crashup-demo/fix-script-launch-issues.mp4"
+                                        type="video/mp4">
+                                </video>
+
+                                <button class="faq-big-play" type="button"><i class='bx bx-play'></i></button>
+
+                                <div class="faq-controls">
+                                    <button class="faq-play-toggle" type="button"><i class='bx bx-play'></i></button>
+                                    <div class="faq-progress-box">
+                                        <div class="faq-progress-bar"></div>
+                                        <div class="faq-progress-thumb"></div>
+                                    </div>
+                                    <span class="faq-time"><span class="faq-current">0:00</span> / <span
+                                            class="faq-duration">0:00</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">
+                            <span data-key="faqQ3">ماهو الحد الادنى لتشغيل الاسكربت؟</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p class="faq-desc" data-key="faqDesc3"></p>
+
+                            <div class="faq-alert">
+                                <i class='bx bx-info-circle'></i>
+                                <span data-key="faqAlert3"></span>
+                            </div>
+
+                            <div class="faq-video-player">
+                                <video class="faq-video" poster="img/crashup-demo/minimum.png" preload="metadata"
+                                    playsinline webkit-playsinline controlslist="nodownload noplaybackrate"
+                                    disablepictureinpicture>
+                                    <source
+                                        src="https://pub-8919913663d740d5896346aa63518984.r2.dev/crashup-demo/minimum-requirements.mp4"
+                                        type="video/mp4">
+                                </video>
+
+                                <button class="faq-big-play" type="button"><i class='bx bx-play'></i></button>
+
+                                <div class="faq-controls">
+                                    <button class="faq-play-toggle" type="button"><i class='bx bx-play'></i></button>
+                                    <div class="faq-progress-box">
+                                        <div class="faq-progress-bar"></div>
+                                        <div class="faq-progress-thumb"></div>
+                                    </div>
+                                    <span class="faq-time"><span class="faq-current">0:00</span> / <span
+                                            class="faq-duration">0:00</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">
+                            <span data-key="faqQ4">كيفية تحميل الاسكربت؟</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p class="faq-desc">
+                                <span data-key="faqDesc4"></span>
+                                <a class="faq-inline-download" href="crashup.html" data-key="faqDownloadLink">اضغط هنا
+                                    للتحميل</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
 
 
 
 
-    <footer class="footer reveal">
-        <div class="social">
-            <a id="telegramLink" href="https://t.me/vexplayvip" target="_blank" rel="noopener noreferrer">
-                <i class='bx bxl-telegram'></i>
-            </a>
+            <footer class="footer reveal">
+                <div class="social">
+                    <a id="telegramLink" href="https://t.me/vexplayvip" target="_blank" rel="noopener noreferrer">
+                        <i class='bx bxl-telegram'></i>
+                    </a>
 
-            <a id="youtubeLink" href="https://www.youtube.com/@VexPlayVip" target="_blank" rel="noopener noreferrer">
-                <i class='bx bxl-youtube'></i>
-            </a>
+                    <a id="youtubeLink" href="https://www.youtube.com/@VexPlayVip" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class='bx bxl-youtube'></i>
+                    </a>
 
 
-        </div>
+                </div>
 
-        <p data-key="footer">© 2026 VexPlay. جميع الحقوق محفوظة.</p>
-    </footer>
+                <p data-key="footer">© 2026 VexPlay. جميع الحقوق محفوظة.</p>
+            </footer>
 
-    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Back to top">
-        <i class='bx bx-up-arrow-alt'></i>
-    </button>
+            <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Back to top">
+                <i class='bx bx-up-arrow-alt'></i>
+            </button>
 
-    <script src="js/main.js"></script>
+            <script src="js/main.js"></script>
+            <script src="js/demo_crashup.js"></script>
 
 </body>
 
