@@ -201,6 +201,7 @@
     });
 
     const faqItems = document.querySelectorAll(".faq-item");
+    const demoPromoVideo = document.getElementById("demoPromoVideo");
 
     function closeFaqItem(item) {
         const answer = item.querySelector(".faq-answer");
@@ -281,6 +282,10 @@
         video.addEventListener("click", toggleFaqVideo);
 
         video.addEventListener("play", () => {
+            if (demoPromoVideo && !demoPromoVideo.paused) {
+                demoPromoVideo.pause();
+            }
+
             if (bigPlay) bigPlay.classList.add("hide");
             if (playToggle) playToggle.innerHTML = "<i class='bx bx-pause'></i>";
         });
