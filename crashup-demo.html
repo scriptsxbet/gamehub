@@ -111,18 +111,15 @@
             <div class="demo-promo-player" id="demoPromoPlayer">
                 <video id="demoPromoVideo" class="demo-promo-video"
                     src="https://pub-8919913663d740d5896346aa63518984.r2.dev/crashup-demo/script-test.mp4"
-                    preload="metadata" muted playsinline webkit-playsinline controlslist="nodownload noplaybackrate"
-                    disablepictureinpicture>
+                    poster="img/crashup-demo/test-script.png" preload="metadata" playsinline webkit-playsinline
+                    controlslist="nodownload noplaybackrate" disablepictureinpicture>
                 </video>
 
                 <button class="demo-promo-big-play" id="demoPromoBigPlay">
                     <i class='bx bx-play'></i>
                 </button>
 
-                <button class="demo-promo-sound-btn" id="demoPromoSoundBtn">
-                    <i class='bx bx-volume-full'></i>
-                    <span data-key="soundBtn">اضغط لتفعيل الصوت</span>
-                </button>
+
 
                 <div class="demo-promo-controls">
                     <button id="demoPromoPlayPause" class="demo-promo-control-btn">
@@ -165,39 +162,6 @@
 
                     <div class="faq-item">
                         <button class="faq-question" type="button">
-                            <span data-key="faqQ1">ما الفرق بين الباقات؟</span>
-                            <i class='bx bx-chevron-down'></i>
-                        </button>
-
-                        <div class="faq-answer">
-                            <p class="faq-desc" data-key="faqDesc1"></p>
-
-                            <div class="faq-video-player">
-                                <video class="faq-video" poster="img/crashup-demo/plans.png" preload="metadata"
-                                    playsinline webkit-playsinline controlslist="nodownload noplaybackrate"
-                                    disablepictureinpicture>
-                                    <source
-                                        src="https://pub-8919913663d740d5896346aa63518984.r2.dev/crashup-demo/plans-feed-differences.mp4"
-                                        type="video/mp4">
-                                </video>
-
-                                <button class="faq-big-play" type="button"><i class='bx bx-play'></i></button>
-
-                                <div class="faq-controls">
-                                    <button class="faq-play-toggle" type="button"><i class='bx bx-play'></i></button>
-                                    <div class="faq-progress-box">
-                                        <div class="faq-progress-bar"></div>
-                                        <div class="faq-progress-thumb"></div>
-                                    </div>
-                                    <span class="faq-time"><span class="faq-current">0:00</span> / <span
-                                            class="faq-duration">0:00</span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" type="button">
                             <span data-key="faqQ2">حل مشكلة عدم تشغيل الاسكربت؟</span>
                             <i class='bx bx-chevron-down'></i>
                         </button>
@@ -228,6 +192,43 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">
+                            <span data-key="faqQ1">ما الفرق بين الباقات؟</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+
+
+
+                        <div class="faq-answer">
+                            <p class="faq-desc" data-key="faqDesc1"></p>
+
+                            <div class="faq-video-player">
+                                <video class="faq-video" poster="img/crashup-demo/plans.png" preload="metadata"
+                                    playsinline webkit-playsinline controlslist="nodownload noplaybackrate"
+                                    disablepictureinpicture>
+                                    <source
+                                        src="https://pub-8919913663d740d5896346aa63518984.r2.dev/crashup-demo/plans-feed-differences.mp4"
+                                        type="video/mp4">
+                                </video>
+
+                                <button class="faq-big-play" type="button"><i class='bx bx-play'></i></button>
+
+                                <div class="faq-controls">
+                                    <button class="faq-play-toggle" type="button"><i class='bx bx-play'></i></button>
+                                    <div class="faq-progress-box">
+                                        <div class="faq-progress-bar"></div>
+                                        <div class="faq-progress-thumb"></div>
+                                    </div>
+                                    <span class="faq-time"><span class="faq-current">0:00</span> / <span
+                                            class="faq-duration">0:00</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
 
                     <div class="faq-item">
                         <button class="faq-question" type="button">

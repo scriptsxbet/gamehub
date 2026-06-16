@@ -22,20 +22,11 @@
 
         if (!player || !video) return;
 
-        video.muted = true;
+        video.muted = false;
         video.controls = false;
 
         video.addEventListener("contextmenu", e => e.preventDefault());
 
-        if (config.autoplay) {
-            window.addEventListener("load", () => {
-                video.play().then(() => {
-                    if (bigPlay) bigPlay.classList.add("hide");
-                }).catch(() => {
-                    if (bigPlay) bigPlay.classList.remove("hide");
-                });
-            });
-        }
 
         video.addEventListener("loadedmetadata", () => {
             if (durationEl) durationEl.textContent = formatTime(video.duration);
@@ -205,8 +196,8 @@
         progressThumbId: "demoPromoProgressThumb",
         currentTimeId: "demoPromoCurrentTime",
         durationId: "demoPromoDuration",
-        soundBtnId: "demoPromoSoundBtn",
-        autoplay: true
+        soundBtnId: null,
+        autoplay: false
     });
 
     const faqItems = document.querySelectorAll(".faq-item");
