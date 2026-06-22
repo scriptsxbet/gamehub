@@ -140,10 +140,10 @@ function applyLanguage(lang, showLoader = false) {
 
         if (telegramLink && youtubeLink) {
             if (lang === "ar") {
-                telegramLink.href = "https://t.me/vexplayvip";
+                telegramLink.href = "https://t.me/+Tx3tztlnea9kOWQ0";
                 youtubeLink.href = "https://www.youtube.com/@VexPlayVip";
             } else {
-                telegramLink.href = "https://t.me/vexplayvip";
+                telegramLink.href = "https://t.me/+Tx3tztlnea9kOWQ0";
                 youtubeLink.href = "https://www.youtube.com/@VexPlayVip";
             }
         }
