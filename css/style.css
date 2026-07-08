@@ -52,8 +52,8 @@ body {
     min-height: 100vh;
     color: var(--text);
     background:
-        radial-gradient(circle at top, rgba(77, 163, 255, .20), transparent 34%),
-        linear-gradient(180deg, #0b1220 0%, #080d16 55%, #05070c 100%);
+        radial-gradient(circle at top, rgba(77, 163, 255, .045), transparent 30%),
+        linear-gradient(180deg, #03050a 0%, #020307 55%, #000103 100%) !important;
     overflow-x: hidden;
 }
 
@@ -4448,4 +4448,256 @@ html[data-theme="light"] .promo-copy-btn:hover {
 
 html[data-theme="light"] .bonus-note {
     color: #526174 !important;
+}
+
+html:not([data-theme="light"]) {
+    --card: #050811;
+    --card2: #090d16;
+    --line: rgba(125, 211, 252, .09);
+}
+
+html:not([data-theme="light"]) .header,
+html:not([data-theme="light"]) .footer,
+html:not([data-theme="light"]) .hero-pro,
+html:not([data-theme="light"]) .card,
+html:not([data-theme="light"]) .script-card,
+html:not([data-theme="light"]) .soon-card,
+html:not([data-theme="light"]) .compat-card,
+html:not([data-theme="light"]) .features-dialog,
+html:not([data-theme="light"]) .bonus-dialog,
+html:not([data-theme="light"]) .side-menu,
+html:not([data-theme="light"]) .lang-box,
+html:not([data-theme="light"]) .pro-loader {
+    background:
+        linear-gradient(180deg, rgba(8, 12, 20, .94), rgba(3, 5, 10, .98)) !important;
+    border-color: rgba(125, 211, 252, .09) !important;
+    box-shadow: none !important;
+}
+
+html:not([data-theme="light"]) .script-feature-mini,
+html:not([data-theme="light"]) .script-platforms-box,
+html:not([data-theme="light"]) .script-platforms-grid span,
+html:not([data-theme="light"]) .script-logo-box,
+html:not([data-theme="light"]) .feature-box,
+html:not([data-theme="light"]) .script-benefits-block,
+html:not([data-theme="light"]) .script-benefit-item,
+html:not([data-theme="light"]) .script-benefit-note,
+html:not([data-theme="light"]) .promo-code-box,
+html:not([data-theme="light"]) .bonus-platforms span,
+html:not([data-theme="light"]) .side-menu-links a {
+    background: rgba(255, 255, 255, .025) !important;
+    border-color: rgba(125, 211, 252, .085) !important;
+    box-shadow: none !important;
+}
+
+html:not([data-theme="light"]) .script-status-badge,
+html:not([data-theme="light"]) .script-free-badge,
+html:not([data-theme="light"]) .features-mini-label,
+html:not([data-theme="light"]) .bonus-mini-label,
+html:not([data-theme="light"]) .badge,
+html:not([data-theme="light"]) .free-badge {
+    background: rgba(77, 163, 255, .055) !important;
+    border-color: rgba(125, 211, 252, .11) !important;
+}
+
+html:not([data-theme="light"]) .menu-toggle,
+html:not([data-theme="light"]) .theme-toggle,
+html:not([data-theme="light"]) .lang-select {
+    background:
+        linear-gradient(180deg, rgba(10, 15, 25, .95), rgba(4, 7, 12, .98)) !important;
+    border-color: rgba(125, 211, 252, .12) !important;
+    box-shadow: none !important;
+}
+
+html:not([data-theme="light"]) .features-modal-backdrop,
+html:not([data-theme="light"]) .bonus-modal-backdrop,
+html:not([data-theme="light"]) .sidebar-overlay {
+    background: rgba(1, 2, 5, .78) !important;
+}
+
+/* Dark Mode Background */
+html:not([data-theme="light"]) body {
+    min-height: 100vh;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top, rgba(77, 163, 255, .045), transparent 30%),
+        linear-gradient(180deg, #03050a 0%, #020307 55%, #000103 100%) !important;
+    overflow-x: hidden;
+}
+
+/* Light Mode Background */
+html[data-theme="light"] body {
+    min-height: 100vh;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top, rgba(20, 125, 255, .14), transparent 34%),
+        linear-gradient(180deg, #f5f9ff 0%, #eef5ff 55%, #eaf2ff 100%) !important;
+    overflow-x: hidden;
+}
+
+html[data-theme="light"] body {
+    background:
+        radial-gradient(circle at top, rgba(20, 125, 255, .025), transparent 32%),
+        linear-gradient(180deg, #fbfcff 0%, #f7f9fc 55%, #f3f5f8 100%) !important;
+}
+
+/* قلل الزرقة من الكونتينرات */
+html[data-theme="light"] .header,
+html[data-theme="light"] .footer,
+html[data-theme="light"] .hero-pro,
+html[data-theme="light"] .card,
+html[data-theme="light"] .script-card,
+html[data-theme="light"] .soon-card,
+html[data-theme="light"] .compat-card,
+html[data-theme="light"] .features-dialog,
+html[data-theme="light"] .bonus-dialog,
+html[data-theme="light"] .side-menu,
+html[data-theme="light"] .lang-box,
+html[data-theme="light"] .pro-loader {
+    background:
+        linear-gradient(180deg, #ffffff 0%, #f6f7fa 100%) !important;
+    border-color: rgba(7, 17, 31, .09) !important;
+    box-shadow: none !important;
+}
+
+/* قلل الزرقة من العناصر الداخلية */
+html[data-theme="light"] .script-feature-mini,
+html[data-theme="light"] .script-logo-box,
+html[data-theme="light"] .script-features-btn,
+html[data-theme="light"] .feature-box,
+html[data-theme="light"] .script-benefits-block,
+html[data-theme="light"] .script-benefit-item,
+html[data-theme="light"] .script-benefit-note,
+html[data-theme="light"] .promo-code-box,
+html[data-theme="light"] .bonus-platforms span,
+html[data-theme="light"] .side-menu-links a {
+    background: #ffffff !important;
+    border-color: rgba(7, 17, 31, .08) !important;
+    box-shadow: none !important;
+}
+
+/* خليه أزرق خفيف جدًا للبادجات فقط */
+html[data-theme="light"] .badge,
+html[data-theme="light"] .free-badge,
+html[data-theme="light"] .script-status-badge,
+html[data-theme="light"] .script-free-badge,
+html[data-theme="light"] .features-mini-label,
+html[data-theme="light"] .bonus-mini-label {
+    background: rgba(20, 125, 255, .035) !important;
+    border-color: rgba(20, 125, 255, .09) !important;
+}
+
+/* قلل زرقة الـ overlays */
+html[data-theme="light"] .features-modal-backdrop,
+html[data-theme="light"] .bonus-modal-backdrop,
+html[data-theme="light"] .sidebar-overlay {
+    background: rgba(246, 248, 252, .82) !important;
+}
+
+/* Header Solid Background - No Gradient */
+html:not([data-theme="light"]) .header {
+    background: #050811 !important;
+    border-color: rgba(125, 211, 252, .09) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+html[data-theme="light"] .header {
+    background: #ffffff !important;
+    border-color: rgba(7, 17, 31, .09) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* أزرار الهيدر بدون تدرج كمان */
+html:not([data-theme="light"]) .menu-toggle,
+html:not([data-theme="light"]) .theme-toggle,
+html:not([data-theme="light"]) .lang-select {
+    background: #070b13 !important;
+    border-color: rgba(125, 211, 252, .12) !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .menu-toggle,
+html[data-theme="light"] .theme-toggle,
+html[data-theme="light"] .lang-select {
+    background: #ffffff !important;
+    border-color: rgba(7, 17, 31, .10) !important;
+    box-shadow: none !important;
+}
+
+.tools-heading-section {
+    width: min(1160px, 92%);
+    margin: 0 auto 24px;
+    scroll-margin-top: 26px;
+}
+
+.tools-heading-section .compat-title {
+    margin-bottom: 0 !important;
+}
+
+.tools-heading-section .compat-title h2 {
+    color: var(--silver) !important;
+    text-shadow: none !important;
+}
+
+.tools-heading-section .compat-title span {
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(77, 163, 255, .75),
+            transparent) !important;
+}
+
+.tools-heading-section .compat-title span::after {
+    background: var(--primary) !important;
+    box-shadow: 0 0 16px rgba(77, 163, 255, .65) !important;
+}
+
+html[data-theme="light"] .tools-heading-section .compat-title h2 {
+    color: #07111f !important;
+    text-shadow: none !important;
+}
+
+html[data-theme="light"] .tools-heading-section .compat-title span {
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(20, 125, 255, .45),
+            transparent) !important;
+}
+
+html[data-theme="light"] .tools-heading-section .compat-title span::after {
+    background: #147dff !important;
+    box-shadow: none !important;
+}
+
+@media (max-width: 700px) {
+    .tools-heading-section {
+        width: 92%;
+        margin-bottom: 18px;
+    }
+
+    .tools-heading-section .compat-title {
+        gap: 10px;
+    }
+
+    .tools-heading-section .compat-title h2 {
+        font-size: 19px;
+        white-space: nowrap;
+    }
+
+    .tools-heading-section .compat-title span {
+        width: 42px;
+    }
+}
+
+@media (max-width: 360px) {
+    .tools-heading-section .compat-title h2 {
+        font-size: 17px;
+    }
+
+    .tools-heading-section .compat-title span {
+        width: 30px;
+    }
 }

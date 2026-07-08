@@ -99,6 +99,7 @@ const translations = {
         scriptBenefitEight: "يتم تحديث السكربت باستمرار لتحسين الأداء وإضافة مزايا جديدة.",
         scriptBenefitNine: "فريق الدعم متوفر للمساعدة في حالة مواجهة أي استفسار أو مشكلة.",
         scriptBenefitNote: "نسعى دائمًا لتقديم تجربة استخدام سهلة، مستقرة، وعالية الجودة لجميع المستخدمين، مع التركيز على الأداء والسرعة وسهولة التفعيل.",
+        latestToolsTitle: "أحدث أدوات VexPlay",
     },
     en: {
         badge: "SECURE SCRIPTS HUB",
@@ -196,6 +197,8 @@ const translations = {
         scriptBenefitEight: "The script is continuously updated to improve performance and add new features.",
         scriptBenefitNine: "The support team is available to help with any question or issue.",
         scriptBenefitNote: "We always aim to provide an easy, stable, and high-quality experience for all users, focusing on performance, speed, and simple activation.",
+        latestToolsTitle: "Latest VexPlay Tools",
+
     }
 
 };

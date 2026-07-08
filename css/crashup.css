@@ -1196,3 +1196,58 @@ html[data-theme="light"] .crash-support-icon {
     background: linear-gradient(135deg, #229ed9, #0bbf6a);
     color: #ffffff;
 }
+
+
+/* CrashUp Page Cards - Same Site Colors */
+
+/* Dark Mode */
+html:not([data-theme="light"]) .tool-hero-card,
+html:not([data-theme="light"]) .download-card,
+html:not([data-theme="light"]) .support-card,
+html:not([data-theme="light"]) .faq-item {
+    background: #050811 !important;
+    border-color: rgba(125, 211, 252, .09) !important;
+    box-shadow: none !important;
+}
+
+html:not([data-theme="light"]) .tool-hero-card::before,
+html:not([data-theme="light"]) .faq-item::before {
+    display: none !important;
+}
+
+/* Light Mode */
+html[data-theme="light"] .tool-hero-card,
+html[data-theme="light"] .download-card,
+html[data-theme="light"] .support-card,
+html[data-theme="light"] .faq-item {
+    background: #ffffff !important;
+    border-color: rgba(7, 17, 31, .09) !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .tool-hero-card::before,
+html[data-theme="light"] .faq-item::before {
+    display: none !important;
+}
+
+/* العناصر الصغيرة داخل الكاردات */
+html:not([data-theme="light"]) .tool-meta span,
+html:not([data-theme="light"]) .hero-platforms span,
+html:not([data-theme="light"]) .faq-question i {
+    background: rgba(255, 255, 255, .025) !important;
+    border-color: rgba(125, 211, 252, .085) !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .tool-meta span,
+html[data-theme="light"] .hero-platforms span,
+html[data-theme="light"] .faq-question i {
+    background: #ffffff !important;
+    border-color: rgba(7, 17, 31, .08) !important;
+    box-shadow: none !important;
+}
+
+/* شيل أي خط مسح أزرق فوق كارد الهيرو */
+.scan-line {
+    display: none !important;
+}
