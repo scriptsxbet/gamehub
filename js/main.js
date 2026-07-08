@@ -57,6 +57,8 @@ const translations = {
         statFree: "مجاني",
         statOnline: "متاح دائمًا",
         statAndroid: "أندرويد",
+        compatibleTitle: "متوافق مع كبرى المنصات",
+        compatiblePercent: "متوافق 100%",
 
     },
     en: {
@@ -111,6 +113,9 @@ const translations = {
         statFree: "Free",
         statOnline: "Always Online",
         statAndroid: "Android",
+
+        compatibleTitle: "Compatible With Major Platforms",
+        compatiblePercent: "100% Compatible",
     }
 
 };
