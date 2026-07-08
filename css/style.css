@@ -1945,3 +1945,66 @@ html[data-theme="light"] .card-actions .btn:not(.demo-btn) i {
     position: relative;
     z-index: 2;
 }
+
+/* Mobile Header: Controls Top / Logo Bottom */
+@media (max-width: 600px) {
+    .header {
+        height: auto;
+        min-height: unset;
+        padding: 18px;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: center;
+        justify-content: center;
+        gap: 12px 10px;
+    }
+
+    .language-box,
+    .theme-toggle,
+    .menu-toggle,
+    html[dir="ltr"] .language-box,
+    html[dir="ltr"] .theme-toggle,
+    html[dir="ltr"] .menu-toggle {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+    }
+
+    .language-box,
+    html[dir="ltr"] .language-box {
+        order: 1;
+        width: 150px;
+        height: 44px;
+        flex: 0 0 150px;
+    }
+
+    .theme-toggle {
+        order: 2;
+        width: 44px;
+        height: 44px;
+        flex: 0 0 44px;
+    }
+
+    .menu-toggle {
+        order: 3;
+        width: 44px;
+        height: 44px;
+        flex: 0 0 44px;
+    }
+
+    .logo {
+        order: 4;
+        width: 100%;
+        flex: 0 0 100%;
+        text-align: center;
+        margin-top: 2px;
+    }
+
+    .menu-toggle:hover,
+    .theme-toggle:hover {
+        transform: scale(1.04) !important;
+    }
+}
