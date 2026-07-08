@@ -4224,3 +4224,228 @@ html[data-theme="light"] .script-download-btn:hover {
     border-color: rgba(20, 125, 255, .55) !important;
     box-shadow: none !important;
 }
+
+/* Premium Light Mode - Features Dialog */
+html[data-theme="light"] .features-modal-backdrop {
+    background: rgba(226, 238, 255, .78) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+}
+
+html[data-theme="light"] .features-dialog {
+    background:
+        radial-gradient(circle at top, rgba(20, 125, 255, .08), transparent 36%),
+        linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%) !important;
+    border: 1px solid rgba(20, 125, 255, .16) !important;
+    box-shadow: none !important;
+    color: #07111f !important;
+}
+
+html[data-theme="light"] .features-close {
+    background: rgba(20, 125, 255, .08) !important;
+    border: 1px solid rgba(20, 125, 255, .16) !important;
+    color: #147dff !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .features-close:hover {
+    background: #147dff !important;
+    color: #ffffff !important;
+}
+
+html[data-theme="light"] .features-mini-label {
+    color: #147dff !important;
+    background: rgba(20, 125, 255, .08) !important;
+    border-color: rgba(20, 125, 255, .18) !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .features-head h2,
+html[data-theme="light"] .script-benefits-title h3 {
+    color: #07111f !important;
+    text-shadow: none !important;
+}
+
+html[data-theme="light"] .features-head p {
+    color: #526174 !important;
+}
+
+html[data-theme="light"] .feature-box {
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, .92), rgba(235, 244, 255, .88)) !important;
+    border: 1px solid rgba(20, 125, 255, .13) !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .feature-box i {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #147dff, #00a8ff) !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .feature-box strong {
+    color: #07111f !important;
+}
+
+html[data-theme="light"] .script-benefits-block {
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, .86), rgba(238, 245, 255, .78)) !important;
+    border: 1px solid rgba(20, 125, 255, .13) !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .script-benefits-title i {
+    color: #147dff !important;
+    filter: none !important;
+    text-shadow: none !important;
+}
+
+html[data-theme="light"] .script-benefit-item {
+    background: #ffffff !important;
+    border: 1px solid rgba(20, 125, 255, .11) !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .script-benefit-item>span {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #147dff, #00a8ff) !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+html[data-theme="light"] .script-benefit-item p {
+    color: #526174 !important;
+}
+
+html[data-theme="light"] .script-benefit-note {
+    background: rgba(20, 125, 255, .065) !important;
+    border: 1px solid rgba(20, 125, 255, .13) !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .script-benefit-note i {
+    color: #147dff !important;
+    filter: none !important;
+}
+
+html[data-theme="light"] .script-benefit-note p {
+    color: #526174 !important;
+}
+
+/* Custom Scrollbar - Light Mode */
+html[data-theme="light"] .features-dialog {
+    scrollbar-color: rgba(20, 125, 255, .55) rgba(20, 125, 255, .08) !important;
+}
+
+html[data-theme="light"] .features-dialog::-webkit-scrollbar-track {
+    background: rgba(20, 125, 255, .08) !important;
+}
+
+html[data-theme="light"] .features-dialog::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #147dff, #00a8ff) !important;
+    border: 2px solid #ffffff !important;
+}
+
+/* Premium Light Mode - Bonus / Promo Dialog */
+html[data-theme="light"] .bonus-modal-backdrop {
+    background: rgba(226, 238, 255, .78) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+}
+
+html[data-theme="light"] .bonus-dialog {
+    background:
+        radial-gradient(circle at top, rgba(20, 125, 255, .08), transparent 38%),
+        linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%) !important;
+    border: 1px solid rgba(20, 125, 255, .16) !important;
+    box-shadow: none !important;
+    color: #07111f !important;
+}
+
+html[data-theme="light"] .bonus-close {
+    background: rgba(20, 125, 255, .08) !important;
+    border: 1px solid rgba(20, 125, 255, .16) !important;
+    color: #147dff !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .bonus-close:hover {
+    background: #147dff !important;
+    color: #ffffff !important;
+}
+
+html[data-theme="light"] .bonus-gift-glow {
+    background: rgba(20, 125, 255, .12) !important;
+    filter: blur(14px) !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .bonus-gift-icon {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #147dff, #00a8ff) !important;
+    border: 1px solid rgba(20, 125, 255, .18) !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .bonus-mini-label {
+    color: #147dff !important;
+    background: rgba(20, 125, 255, .08) !important;
+    border: 1px solid rgba(20, 125, 255, .18) !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .bonus-dialog h2 {
+    color: #07111f !important;
+    text-shadow: none !important;
+}
+
+html[data-theme="light"] .bonus-dialog p {
+    color: #526174 !important;
+}
+
+html[data-theme="light"] .bonus-platforms span {
+    color: #07111f !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(20, 125, 255, .12) !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .promo-code-box {
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, .94), rgba(238, 245, 255, .86)) !important;
+    border: 1px solid rgba(20, 125, 255, .16) !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .promo-code-box small {
+    color: #526174 !important;
+}
+
+html[data-theme="light"] .promo-code-box strong {
+    color: #07111f !important;
+    text-shadow: none !important;
+}
+
+html[data-theme="light"] .promo-copy-btn {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #147dff, #00a8ff) !important;
+    border: 1px solid rgba(20, 125, 255, .28) !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+html[data-theme="light"] .promo-copy-btn i,
+html[data-theme="light"] .promo-copy-btn span {
+    color: #ffffff !important;
+    filter: none !important;
+    text-shadow: none !important;
+}
+
+html[data-theme="light"] .promo-copy-btn:hover {
+    background: linear-gradient(135deg, #006cff, #00a8ff) !important;
+    box-shadow: none !important;
+}
+
+html[data-theme="light"] .bonus-note {
+    color: #526174 !important;
+}
