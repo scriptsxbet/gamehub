@@ -60,6 +60,27 @@ const translations = {
         compatibleTitle: "متوافق مع كبرى المنصات",
         compatiblePercent: "متوافق 100%",
 
+        bonusLabel: "عرض خاص للمستخدمين الجدد",
+        bonusTitle: "احصل على مكافأة 200%",
+        bonusDesc: "استخدم البروموكود التالي عند التسجيل في منصات 1xBet أو MelBet أو LineBet للحصول على مكافأة 200% على الإيداع الأول.",
+        bonusPromoLabel: "البروموكود",
+        copyPromo: "نسخ",
+        copiedPromo: "تم النسخ",
+        bonusNote: "انسخ الكود واستخدمه أثناء إنشاء حساب جديد للحصول على العرض.",
+        featuresMiniLabel: "مميزات CRASHUP",
+        featuresTitle: "كل ما تحتاجه في اسكربت واحد",
+        featuresSubtitle: "اسكربت احترافي مجاني بالكامل وسريع ودقيق للعمل مع منصات 1xBet و MelBet و LineBet.",
+        featureOneTitle: "مجانا بالكامل",
+        featureTwoTitle: "سريع ودقيق",
+        featureThreeTitle: "توقعات 100%",
+        usageTitle: "طريقة التفعيل",
+        usageStepOneTitle: "إنشاء حساب جديد",
+        usageStepOneDesc: "انشاء حساب جديد على منصة 1xBet أو MelBet أو LineBet باستخدام الرمز الترويجي B95X لربط الاسكربت بشكل صحيح بحسابك.",
+        usageStepTwoTitle: "إكمال البيانات الشخصية",
+        usageStepTwoDesc: "إكمال البيانات الشخصية في حسابك الجديد واضافة رقم الهاتف والبريد الإلكتروني.",
+        usageStepThreeTitle: "إيداع الرصيد",
+        usageStepThreeDesc: "إيداع ما لا يقل عن 40 دولار في حسابك او مايعادل 2000 جنيه مصري.",
+        usageAlert: "هذا الرصيد تقوم بشحنه داخل حسابك وهو ليس رسوم للتفعيل ولكنه في حسابك ويمكنك التصرف فيه كما تشاء ويمكنك سحبه حسب قوانين كل منصة.",
     },
     en: {
         badge: "SECURE SCRIPTS HUB",
@@ -116,6 +137,30 @@ const translations = {
 
         compatibleTitle: "Compatible With Major Platforms",
         compatiblePercent: "100% Compatible",
+
+        bonusLabel: "Special Offer For New Users",
+        bonusTitle: "Get 200% Bonus",
+        bonusDesc: "Use the following promo code when signing up on 1xBet, MelBet, or LineBet to get a 200% bonus on your first deposit.",
+        bonusPromoLabel: "Promo Code",
+        copyPromo: "Copy",
+        copiedPromo: "Copied",
+        bonusNote: "Copy the code and use it while creating a new account to claim the offer.",
+
+        featuresMiniLabel: "CRASHUP Features",
+        featuresTitle: "Everything You Need In One Script",
+        featuresSubtitle: "A fully free, fast, and accurate script made to work with 1xBet, MelBet, and LineBet.",
+        featureOneTitle: "100% Free",
+        featureTwoTitle: "Fast & Accurate",
+        featureThreeTitle: "100% Predictions",
+        usageTitle: "How To Activate",
+        usageStepOneTitle: "Create A New Account",
+        usageStepOneDesc: "Create a new account on 1xBet, MelBet, or LineBet using promo code B95X to link the script correctly to your account.",
+        usageStepTwoTitle: "Complete Personal Data",
+        usageStepTwoDesc: "Complete your personal data inside the new account and add your phone number and email address.",
+        usageStepThreeTitle: "Deposit Balance",
+        usageStepThreeDesc: "Deposit at least 40 USD in your account or the equivalent of 2000 EGP.",
+        usageAlert: "This balance is deposited inside your own account. It is not an activation fee. It remains in your account, and you can use it or withdraw it according to each platform rules.",
+
     }
 
 };
@@ -766,5 +811,120 @@ if (sidebarOverlay) {
 document.addEventListener("keydown", e => {
     if (e.key === "Escape") {
         closeSidebar();
+    }
+});
+
+
+// Bonus Dialog
+const bonusOpenBtn = document.getElementById("bonusOpenBtn");
+const bonusModal = document.getElementById("bonusModal");
+const copyPromoBtn = document.getElementById("copyPromoBtn");
+const copyPromoText = document.getElementById("copyPromoText");
+const promoCodeValue = document.getElementById("promoCodeValue");
+
+function openBonusModal() {
+    if (!bonusModal) return;
+
+    bonusModal.classList.add("show");
+    bonusModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("sidebar-open");
+}
+
+function closeBonusModal() {
+    if (!bonusModal) return;
+
+    bonusModal.classList.remove("show");
+    bonusModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("sidebar-open");
+}
+
+if (bonusOpenBtn) {
+    bonusOpenBtn.addEventListener("click", openBonusModal);
+}
+
+document.querySelectorAll("[data-bonus-close]").forEach(btn => {
+    btn.addEventListener("click", closeBonusModal);
+});
+
+document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && bonusModal && bonusModal.classList.contains("show")) {
+        closeBonusModal();
+    }
+});
+
+function fallbackCopyText(text) {
+    const input = document.createElement("textarea");
+    input.value = text;
+    input.style.position = "fixed";
+    input.style.opacity = "0";
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand("copy");
+    input.remove();
+}
+
+if (copyPromoBtn && promoCodeValue) {
+    copyPromoBtn.addEventListener("click", async () => {
+        const code = promoCodeValue.textContent.trim();
+        const lang = document.documentElement.lang || "ar";
+
+        try {
+            if (navigator.clipboard && window.isSecureContext) {
+                await navigator.clipboard.writeText(code);
+            } else {
+                fallbackCopyText(code);
+            }
+
+            if (copyPromoText) {
+                copyPromoText.textContent = translations[lang]?.copiedPromo || "Copied";
+            }
+
+            copyPromoBtn.classList.add("copied");
+
+            setTimeout(() => {
+                if (copyPromoText) {
+                    copyPromoText.textContent = translations[lang]?.copyPromo || "Copy";
+                }
+
+                copyPromoBtn.classList.remove("copied");
+            }, 1400);
+        } catch (e) {
+            fallbackCopyText(code);
+        }
+    });
+}
+
+
+// Features Dialog
+const featuresOpenBtn = document.getElementById("featuresOpenBtn");
+const featuresModal = document.getElementById("featuresModal");
+
+function openFeaturesModal() {
+    if (!featuresModal) return;
+
+    featuresModal.classList.add("show");
+    featuresModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("sidebar-open");
+}
+
+function closeFeaturesModal() {
+    if (!featuresModal) return;
+
+    featuresModal.classList.remove("show");
+    featuresModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("sidebar-open");
+}
+
+if (featuresOpenBtn) {
+    featuresOpenBtn.addEventListener("click", openFeaturesModal);
+}
+
+document.querySelectorAll("[data-features-close]").forEach(btn => {
+    btn.addEventListener("click", closeFeaturesModal);
+});
+
+document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && featuresModal && featuresModal.classList.contains("show")) {
+        closeFeaturesModal();
     }
 });

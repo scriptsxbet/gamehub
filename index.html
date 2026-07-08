@@ -149,11 +149,10 @@
                         <span data-key="exploreTools">استكشاف الأدوات</span>
                     </a>
 
-                    <a href="https://t.me/VexPlayNet" target="_blank" rel="noopener noreferrer"
-                        class="hero-btn hero-btn-secondary">
+                    <button type="button" class="hero-btn hero-btn-secondary bonus-open-btn" id="bonusOpenBtn">
                         <i class='bx bx-gift'></i>
                         <span data-key="claimBonus">احصل على المكافأة</span>
-                    </a>
+                    </button>
                 </div>
 
                 <div class="hero-stats">
@@ -214,9 +213,11 @@
                         تفاصيل أكثر
                     </a>
 
-                    <a href="crashup-demo" class="btn demo-btn" data-key="script_feature">
-                        مميزات الاسكربت
-                    </a>
+
+                    <button type="button" class="btn demo-btn features-open-btn" id="featuresOpenBtn">
+                        <span data-key="script_feature">مميزات الاسكربت</span>
+                    </button>
+
                 </div>
             </article>
 
@@ -302,6 +303,137 @@
 
         <p data-key="footer">© 2026 VexPlay. جميع الحقوق محفوظة.</p>
     </footer>
+
+    <div class="bonus-modal" id="bonusModal" aria-hidden="true">
+        <div class="bonus-modal-backdrop" data-bonus-close></div>
+
+        <div class="bonus-dialog" role="dialog" aria-modal="true" aria-labelledby="bonusTitle">
+            <button class="bonus-close" type="button" data-bonus-close aria-label="Close">
+                <i class='bx bx-x'></i>
+            </button>
+
+            <div class="bonus-gift-wrap">
+                <div class="bonus-gift-glow"></div>
+                <div class="bonus-gift-icon">
+                    <i class='bx bxs-gift'></i>
+                </div>
+            </div>
+
+            <span class="bonus-mini-label" data-key="bonusLabel">عرض خاص للمستخدمين الجدد</span>
+
+            <h2 id="bonusTitle" data-key="bonusTitle">احصل على مكافأة 200%</h2>
+
+            <p data-key="bonusDesc">
+                استخدم البروموكود التالي عند التسجيل في منصات 1xBet أو MelBet أو LineBet للحصول على مكافأة 200% على
+                الإيداع الأول.
+            </p>
+
+            <div class="bonus-platforms">
+                <span>1xBet</span>
+                <span>MelBet</span>
+                <span>LineBet</span>
+            </div>
+
+            <div class="promo-code-box">
+                <div>
+                    <small data-key="bonusPromoLabel">البروموكود</small>
+                    <strong id="promoCodeValue">B95X</strong>
+                </div>
+
+                <button type="button" class="promo-copy-btn" id="copyPromoBtn" aria-label="Copy promo code">
+                    <i class='bx bx-copy'></i>
+                    <span id="copyPromoText" data-key="copyPromo">نسخ</span>
+                </button>
+            </div>
+
+            <p class="bonus-note" data-key="bonusNote">
+                انسخ الكود واستخدمه أثناء إنشاء حساب جديد للحصول على العرض.
+            </p>
+        </div>
+    </div>
+
+    <div class="features-modal" id="featuresModal" aria-hidden="true">
+        <div class="features-modal-backdrop" data-features-close></div>
+
+        <div class="features-dialog" role="dialog" aria-modal="true" aria-labelledby="featuresTitle">
+            <button class="features-close" type="button" data-features-close aria-label="Close">
+                <i class='bx bx-x'></i>
+            </button>
+
+            <div class="features-head">
+                <span class="features-mini-label" data-key="featuresMiniLabel">مميزات CRASHUP</span>
+                <h2 id="featuresTitle" data-key="featuresTitle">كل ما تحتاجه في اسكربت واحد</h2>
+                <p data-key="featuresSubtitle">
+                    اسكربت احترافي مجاني بالكامل وسريع ودقيق للعمل مع منصات 1xBet و MelBet و LineBet.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class='bx bx-gift'></i>
+                    <strong data-key="featureOneTitle">مجانا بالكامل</strong>
+                </div>
+
+                <div class="feature-box">
+                    <i class='bx bx-tachometer'></i>
+                    <strong data-key="featureTwoTitle">سريع ودقيق</strong>
+                </div>
+
+                <div class="feature-box">
+                    <i class='bx bx-target-lock'></i>
+                    <strong data-key="featureThreeTitle">توقعات 100%</strong>
+                </div>
+            </div>
+
+            <div class="usage-block">
+                <div class="usage-title">
+                    <i class='bx bx-list-check'></i>
+                    <h3 data-key="usageTitle">طريقة الاستخدام</h3>
+                </div>
+
+                <div class="usage-steps">
+                    <div class="usage-step">
+                        <span>01</span>
+                        <div>
+                            <h4 data-key="usageStepOneTitle">إنشاء حساب جديد</h4>
+                            <p data-key="usageStepOneDesc">
+                                انشاء حساب جديد على منصة 1xBet أو MelBet أو LineBet باستخدام الرمز الترويجي B95X لربط
+                                الاسكربت بشكل صحيح بحسابك.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="usage-step">
+                        <span>02</span>
+                        <div>
+                            <h4 data-key="usageStepTwoTitle">إكمال البيانات الشخصية</h4>
+                            <p data-key="usageStepTwoDesc">
+                                إكمال البيانات الشخصية في حسابك الجديد واضافة رقم الهاتف والبريد الإلكتروني.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="usage-step">
+                        <span>03</span>
+                        <div>
+                            <h4 data-key="usageStepThreeTitle">إيداع الرصيد</h4>
+                            <p data-key="usageStepThreeDesc">
+                                إيداع ما لا يقل عن 40 دولار في حسابك او مايعادل 2000 جنيه مصري.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="usage-alert">
+                    <i class='bx bx-info-circle'></i>
+                    <p data-key="usageAlert">
+                        هذا الرصيد تقوم بشحنه داخل حسابك وهو ليس رسوم للتفعيل ولكنه في حسابك ويمكنك التصرف فيه كما تشاء
+                        ويمكنك سحبه حسب قوانين كل منصة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Back to top">
         <i class='bx bx-up-arrow-alt'></i>
