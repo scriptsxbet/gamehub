@@ -35,6 +35,7 @@
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
+    <script src="js/theme.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
@@ -80,6 +81,14 @@
     </div>
 
     <header class="header reveal">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu">
+            <i class='bx bx-menu-alt-right'></i>
+        </button>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+            <i class='bx bx-moon'></i>
+        </button>
+
         <div class="logo"><a href="/">VexPlay</a></div>
 
         <div class="language-box">
@@ -90,6 +99,30 @@
             <i class='bx bx-chevron-down'></i>
         </div>
     </header>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu">
+        <div class="side-menu-head">
+            <div class="side-brand">VEXPLAY</div>
+
+            <button class="side-close" id="sideClose" type="button" aria-label="Close menu">
+                <i class='bx bx-x'></i>
+            </button>
+        </div>
+
+        <div class="side-menu-links">
+            <a href="https://t.me/VexPlayNet" target="_blank" rel="noopener noreferrer">
+                <i class='bx bxl-telegram'></i>
+                <span data-key="sideTelegram">الإنضمام لقناة التليجرام</span>
+            </a>
+
+            <a href="https://www.youtube.com/@VexPlayVip" target="_blank" rel="noopener noreferrer">
+                <i class='bx bxl-youtube'></i>
+                <span data-key="sideYoutube">الاشتراك في قناة اليوتيوب</span>
+            </a>
+        </div>
+    </aside>
 
     <main>
         <section class="hero reveal">

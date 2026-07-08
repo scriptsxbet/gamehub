@@ -49,6 +49,8 @@ const translations = {
         supportTitle: "هل تواجه مشكلة في التفعيل؟",
         supportDesc: "في حال وجود أي مشكلة في التفعيل، تواصل مع فريق الدعم مباشرة على تليجرام.",
         supportBtn: "تواصل مع الدعم",
+        sideTelegram: "الإنضمام لقناة التليجرام",
+        sideYoutube: "الاشتراك في قناة اليوتيوب",
 
     },
     en: {
@@ -95,7 +97,10 @@ const translations = {
         supportTitle: "Having activation issues?",
         supportDesc: "If you face any activation problem, contact the support team directly on Telegram.",
         supportBtn: "Contact Support",
+        sideTelegram: "Join Telegram Channel",
+        sideYoutube: "Subscribe to YouTube Channel",
     }
+
 };
 
 let pageFullyLoaded = false;
@@ -705,3 +710,44 @@ if (scrollTopBtn) {
         });
     });
 })();
+
+
+// Home Sidebar Menu
+const menuToggle = document.getElementById("menuToggle");
+const sideMenu = document.getElementById("sideMenu");
+const sidebarOverlay = document.getElementById("sidebarOverlay");
+const sideClose = document.getElementById("sideClose");
+
+function openSidebar() {
+    if (!sideMenu || !sidebarOverlay) return;
+
+    sideMenu.classList.add("show");
+    sidebarOverlay.classList.add("show");
+    document.body.classList.add("sidebar-open");
+}
+
+function closeSidebar() {
+    if (!sideMenu || !sidebarOverlay) return;
+
+    sideMenu.classList.remove("show");
+    sidebarOverlay.classList.remove("show");
+    document.body.classList.remove("sidebar-open");
+}
+
+if (menuToggle) {
+    menuToggle.addEventListener("click", openSidebar);
+}
+
+if (sideClose) {
+    sideClose.addEventListener("click", closeSidebar);
+}
+
+if (sidebarOverlay) {
+    sidebarOverlay.addEventListener("click", closeSidebar);
+}
+
+document.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+        closeSidebar();
+    }
+});
