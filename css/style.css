@@ -1901,3 +1901,47 @@ html[data-theme="light"] .theme-toggle i {
     filter: none !important;
     text-shadow: none !important;
 }
+
+/* Main Script Button - Light Mode */
+html[data-theme="light"] .card-actions .btn:not(.demo-btn) {
+    position: relative;
+    overflow: hidden;
+    color: #ffffff !important;
+    background:
+        linear-gradient(135deg, #0057ff 0%, #147dff 48%, #00b8ff 100%) !important;
+    border: 1px solid rgba(20, 125, 255, .42) !important;
+    box-shadow:
+        0 14px 34px rgba(20, 125, 255, .20),
+        inset 0 1px 0 rgba(255, 255, 255, .28) !important;
+}
+
+html[data-theme="light"] .card-actions .btn:not(.demo-btn)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(120deg,
+            transparent 0%,
+            rgba(255, 255, 255, .34) 45%,
+            transparent 70%);
+    transform: translateX(-120%);
+    transition: .6s ease;
+}
+
+html[data-theme="light"] .card-actions .btn:not(.demo-btn):hover::before {
+    transform: translateX(120%);
+}
+
+html[data-theme="light"] .card-actions .btn:not(.demo-btn):hover {
+    transform: translateY(-3px);
+    border-color: rgba(0, 184, 255, .60) !important;
+    box-shadow:
+        0 18px 42px rgba(20, 125, 255, .28),
+        inset 0 1px 0 rgba(255, 255, 255, .35) !important;
+}
+
+html[data-theme="light"] .card-actions .btn:not(.demo-btn) span,
+html[data-theme="light"] .card-actions .btn:not(.demo-btn) i {
+    position: relative;
+    z-index: 2;
+}
