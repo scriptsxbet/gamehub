@@ -1071,3 +1071,128 @@ html[dir="ltr"] .scroll-top-btn {
         justify-content: center;
     }
 }
+
+/* Crashup Light Mode */
+html[data-theme="light"] .tool-hero-card,
+html[data-theme="light"] .download-card,
+html[data-theme="light"] .support-card,
+html[data-theme="light"] .faq-item {
+    background: linear-gradient(180deg, #ffffff, #eef5ff);
+    border-color: rgba(7, 17, 31, .10);
+    box-shadow: 0 25px 70px rgba(20, 125, 255, .10);
+}
+
+html[data-theme="light"] .tool-hero-card::before,
+html[data-theme="light"] .side-menu::before {
+    background: linear-gradient(transparent 97%, rgba(20, 125, 255, .08) 100%);
+    background-size: 100% 5px;
+}
+
+html[data-theme="light"] .scan-line {
+    background: linear-gradient(to bottom,
+            transparent,
+            rgba(20, 125, 255, .15),
+            transparent);
+}
+
+html[data-theme="light"] .tool-hero h1,
+html[data-theme="light"] .section-head h2,
+html[data-theme="light"] .download-content h2,
+html[data-theme="light"] .support-content h2,
+html[data-theme="light"] .faq-head h2,
+html[data-theme="light"] .faq-question {
+    color: #07111f;
+}
+
+html[data-theme="light"] .tool-hero p,
+html[data-theme="light"] .section-head p,
+html[data-theme="light"] .download-content p,
+html[data-theme="light"] .support-content p,
+html[data-theme="light"] .faq-head p,
+html[data-theme="light"] .faq-desc {
+    color: #526174;
+}
+
+html[data-theme="light"] .tool-meta span,
+html[data-theme="light"] .hero-platforms span {
+    background: rgba(20, 125, 255, .08);
+    border-color: rgba(20, 125, 255, .12);
+    color: #07111f;
+}
+
+html[data-theme="light"] .tool-meta b {
+    color: #526174;
+}
+
+html[data-theme="light"] .tool-meta i {
+    color: #147dff;
+}
+
+html[data-theme="light"] .section-head span,
+html[data-theme="light"] .faq-head span {
+    background: rgba(20, 125, 255, .08);
+    border-color: rgba(20, 125, 255, .18);
+    color: #147dff;
+}
+
+html[data-theme="light"] .faq-question i {
+    background: rgba(20, 125, 255, .10);
+    color: #147dff;
+}
+
+html[data-theme="light"] .faq-item.active .faq-question i {
+    background: linear-gradient(135deg, #147dff, #00a8ff);
+    color: #ffffff;
+}
+
+html[data-theme="light"] .faq-alert {
+    background: rgba(255, 193, 7, .16);
+    border-color: rgba(255, 193, 7, .35);
+    color: #7a5600;
+}
+
+html[data-theme="light"] .faq-alert i {
+    color: #d89000;
+}
+
+html[data-theme="light"] .custom-video-player,
+html[data-theme="light"] .faq-video-player {
+    border-color: rgba(20, 125, 255, .22);
+    box-shadow: 0 28px 80px rgba(20, 125, 255, .12);
+}
+
+html[data-theme="light"] .video-controls,
+html[data-theme="light"] .faq-controls {
+    background: rgba(255, 255, 255, .86);
+    border-color: rgba(7, 17, 31, .10);
+}
+
+html[data-theme="light"] .control-btn,
+html[data-theme="light"] .faq-play-toggle {
+    background: rgba(20, 125, 255, .08);
+    color: #147dff;
+}
+
+html[data-theme="light"] .video-time,
+html[data-theme="light"] .faq-time {
+    color: #07111f;
+}
+
+html[data-theme="light"] .progress-box,
+html[data-theme="light"] .faq-progress-box {
+    background: rgba(7, 17, 31, .12);
+}
+
+html[data-theme="light"] .progress-loaded {
+    background: rgba(7, 17, 31, .08);
+}
+
+html[data-theme="light"] .crash-download-icon {
+    background: linear-gradient(135deg, #147dff, #00a8ff);
+    color: #ffffff;
+}
+
+html[data-theme="light"] .crash-support-icon {
+    background: linear-gradient(135deg, #229ed9, #0bbf6a);
+    color: #ffffff;
+}
