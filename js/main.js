@@ -534,3 +534,174 @@ if (scrollTopBtn) {
         });
     });
 }
+
+// FAQ Videos - CRASHUP Page
+(function setupCrashupFaqVideos() {
+    const faqItems = document.querySelectorAll(".faq-item");
+    if (!faqItems.length) return;
+
+    const mainTutorialVideo = document.getElementById("tutorialVideo");
+
+    function closeFaqItem(item) {
+        const answer = item.querySelector(".faq-answer");
+        const video = item.querySelector(".faq-video");
+        const bigPlay = item.querySelector(".faq-big-play");
+        const playToggle = item.querySelector(".faq-play-toggle");
+
+        item.classList.remove("active");
+
+        if (answer) answer.style.maxHeight = "0px";
+        if (video) video.pause();
+        if (bigPlay) bigPlay.classList.remove("hide");
+        if (playToggle) playToggle.innerHTML = "<i class='bx bx-play'></i>";
+    }
+
+    faqItems.forEach(item => {
+        const question = item.querySelector(".faq-question");
+        const answer = item.querySelector(".faq-answer");
+        const video = item.querySelector(".faq-video");
+        const bigPlay = item.querySelector(".faq-big-play");
+        const playToggle = item.querySelector(".faq-play-toggle");
+        const progressBox = item.querySelector(".faq-progress-box");
+        const progressBar = item.querySelector(".faq-progress-bar");
+        const progressThumb = item.querySelector(".faq-progress-thumb");
+        const currentTime = item.querySelector(".faq-current");
+        const duration = item.querySelector(".faq-duration");
+
+        if (!question || !answer) return;
+
+        question.addEventListener("click", () => {
+            const isActive = item.classList.contains("active");
+
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) closeFaqItem(otherItem);
+            });
+
+            if (isActive) {
+                closeFaqItem(item);
+                return;
+            }
+
+            item.classList.add("active");
+            answer.style.maxHeight = (answer.scrollHeight + 80) + "px";
+
+            setTimeout(() => {
+                answer.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }, 200);
+        });
+
+        if (!video) return;
+
+        video.controls = false;
+        video.addEventListener("contextmenu", e => e.preventDefault());
+
+        video.addEventListener("loadedmetadata", () => {
+            if (duration) duration.textContent = formatTime(video.duration);
+
+            if (item.classList.contains("active")) {
+                answer.style.maxHeight = (answer.scrollHeight + 80) + "px";
+            }
+        });
+
+        video.addEventListener("timeupdate", () => {
+            if (!video.duration) return;
+
+            const percent = (video.currentTime / video.duration) * 100;
+
+            if (progressBar) progressBar.style.width = `${percent}%`;
+            if (progressThumb) progressThumb.style.left = `${percent}%`;
+            if (currentTime) currentTime.textContent = formatTime(video.currentTime);
+        });
+
+        function toggleFaqVideo(e) {
+            if (e) e.stopPropagation();
+            video.paused ? video.play() : video.pause();
+        }
+
+        if (bigPlay) bigPlay.addEventListener("click", toggleFaqVideo);
+        if (playToggle) playToggle.addEventListener("click", toggleFaqVideo);
+        video.addEventListener("click", toggleFaqVideo);
+
+        video.addEventListener("play", () => {
+            if (mainTutorialVideo && !mainTutorialVideo.paused) {
+                mainTutorialVideo.pause();
+            }
+
+            faqItems.forEach(otherItem => {
+                const otherVideo = otherItem.querySelector(".faq-video");
+
+                if (otherVideo && otherVideo !== video && !otherVideo.paused) {
+                    otherVideo.pause();
+                }
+            });
+
+            if (bigPlay) bigPlay.classList.add("hide");
+            if (playToggle) playToggle.innerHTML = "<i class='bx bx-pause'></i>";
+        });
+
+        video.addEventListener("pause", () => {
+            if (bigPlay) bigPlay.classList.remove("hide");
+            if (playToggle) playToggle.innerHTML = "<i class='bx bx-play'></i>";
+        });
+
+        if (progressBox) {
+            progressBox.addEventListener("click", e => {
+                e.stopPropagation();
+                if (!video.duration) return;
+
+                const rect = progressBox.getBoundingClientRect();
+                const percent = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+
+                video.currentTime = percent * video.duration;
+            });
+        }
+
+        let isDraggingFaqProgress = false;
+
+        function seek(clientX) {
+            if (!video.duration || !progressBox) return;
+
+            const rect = progressBox.getBoundingClientRect();
+            const percent = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+
+            video.currentTime = percent * video.duration;
+
+            if (progressBar) progressBar.style.width = `${percent * 100}%`;
+            if (progressThumb) progressThumb.style.left = `${percent * 100}%`;
+        }
+
+        if (progressThumb) {
+            progressThumb.addEventListener("mousedown", e => {
+                isDraggingFaqProgress = true;
+                e.preventDefault();
+                e.stopPropagation();
+            });
+
+            progressThumb.addEventListener("touchstart", e => {
+                isDraggingFaqProgress = true;
+                e.stopPropagation();
+            }, { passive: true });
+        }
+
+        document.addEventListener("mousemove", e => {
+            if (!isDraggingFaqProgress) return;
+            seek(e.clientX);
+        });
+
+        document.addEventListener("mouseup", () => {
+            isDraggingFaqProgress = false;
+        });
+
+        document.addEventListener("touchmove", e => {
+            if (!isDraggingFaqProgress) return;
+            seek(e.touches[0].clientX);
+        }, { passive: true });
+
+        document.addEventListener("touchend", () => {
+            isDraggingFaqProgress = false;
+        });
+    });
+})();
