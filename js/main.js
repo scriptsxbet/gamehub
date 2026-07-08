@@ -6,7 +6,7 @@ const langSelect = document.getElementById("langSelect");
 const translations = {
     ar: {
         badge: "SECURE SCRIPTS HUB",
-        title: "اسكربتات مجانية بالكامل",
+        title: `اسكربتات مجانية <span class="blue-word">بالكامل</span>`,
         subtitle: "في VexPlay ستجد جميع أدواتنا المجانية بالكامل التي تتنصت على خوادم منصات المراهنات بشكل احترافي ودقيق مما تساعدك على تحقيق الربح المستمر من هذه المنصات",
         live: "نشط الآن",
         desc1: "اسكربت مجاني بالكامل تم تطويره للتنصت على WebSocket لعبة Crash وسحب توقيت الانفجار قبل بداية الجولة وعرضه في الاسكربت  فوراً",
@@ -81,10 +81,28 @@ const translations = {
         usageStepThreeTitle: "إيداع الرصيد",
         usageStepThreeDesc: "إيداع ما لا يقل عن 40 دولار في حسابك او مايعادل 2000 جنيه مصري.",
         usageAlert: "هذا الرصيد تقوم بشحنه داخل حسابك وهو ليس رسوم للتفعيل ولكنه في حسابك ويمكنك التصرف فيه كما تشاء ويمكنك سحبه حسب قوانين كل منصة.",
+        statFreeDesc: "جميع الأدوات مجانية بالكامل",
+        statOnlineDesc: "الخوادم تعمل على مدار الساعة",
+        scriptStatus: "اسكربت نشط الآن",
+        scriptSpeed: "سرعة فائقة",
+        scriptSecurity: "أمان عالي",
+        scriptAccuracy: "دقة متناهية",
+        scriptCompatibleWith: "متوافق مع",
+        scriptBenefitsTitle: "مميزات اسكربت CrashUp",
+        scriptBenefitOne: "السكربت مجاني بالكامل ولا يتطلب أي رسوم أو اشتراكات.",
+        scriptBenefitTwo: "سهل الاستخدام ويمكن تفعيله على حسابك بخطوات بسيطة وسريعة.",
+        scriptBenefitThree: "يتميز بواجهة سهلة وسريعة تناسب جميع المستخدمين.",
+        scriptBenefitFour: "يعرض رقم انفجار لعبة Crash المسمي لعبة الطيارة قبل بداية الجولة.",
+        scriptBenefitFive: "يعمل بسرعة واستقرار لتوفير أفضل تجربة استخدام.",
+        scriptBenefitSix: "لا يسبب تعليقًا أو إيقافًا للحساب عند استخدامه بالطريقة الصحيحة.",
+        scriptBenefitSeven: "عمليات السحب من الحساب تتم بشكل طبيعي وتصل إليك بشكل فوري.",
+        scriptBenefitEight: "يتم تحديث السكربت باستمرار لتحسين الأداء وإضافة مزايا جديدة.",
+        scriptBenefitNine: "فريق الدعم متوفر للمساعدة في حالة مواجهة أي استفسار أو مشكلة.",
+        scriptBenefitNote: "نسعى دائمًا لتقديم تجربة استخدام سهلة، مستقرة، وعالية الجودة لجميع المستخدمين، مع التركيز على الأداء والسرعة وسهولة التفعيل.",
     },
     en: {
         badge: "SECURE SCRIPTS HUB",
-        title: "100% Free SCRIPS",
+        title: `100% Free <span class="blue-word">SCRIPTS</span>`,
         subtitle: "At VexPlay, you'll find a complete collection of free Scripts designed to professionally and accurately monitor betting platform servers, helping you maximize your opportunities for consistent profits.", live: "Active Now",
         desc1: "A completely free Script developed to monitor the Crash game's WebSocket data stream, capture the crash timing before each round begins, and instantly display it within the Script.",
         desc2: "A smart data scanner for platform status and readings.",
@@ -160,7 +178,24 @@ const translations = {
         usageStepThreeTitle: "Deposit Balance",
         usageStepThreeDesc: "Deposit at least 40 USD in your account or the equivalent of 2000 EGP.",
         usageAlert: "This balance is deposited inside your own account. It is not an activation fee. It remains in your account, and you can use it or withdraw it according to each platform rules.",
-
+        statFreeDesc: "All tools are completely free",
+        statOnlineDesc: "Servers run around the clock",
+        scriptStatus: "Script Online Now",
+        scriptSpeed: "Ultra Fast",
+        scriptSecurity: "High Security",
+        scriptAccuracy: "Precise Accuracy",
+        scriptCompatibleWith: "Compatible With",
+        scriptBenefitsTitle: "CrashUp Script Features",
+        scriptBenefitOne: "The script is completely free and does not require any fees or subscriptions.",
+        scriptBenefitTwo: "Easy to use and can be activated on your account with simple and quick steps.",
+        scriptBenefitThree: "It has a simple and fast interface suitable for all users.",
+        scriptBenefitFour: "It displays the Crash game result before the round starts.",
+        scriptBenefitFive: "It runs quickly and steadily to provide the best usage experience.",
+        scriptBenefitSix: "It does not cause account suspension when used correctly.",
+        scriptBenefitSeven: "Withdrawals from your account work normally and arrive instantly.",
+        scriptBenefitEight: "The script is continuously updated to improve performance and add new features.",
+        scriptBenefitNine: "The support team is available to help with any question or issue.",
+        scriptBenefitNote: "We always aim to provide an easy, stable, and high-quality experience for all users, focusing on performance, speed, and simple activation.",
     }
 
 };
@@ -191,6 +226,8 @@ function applyLanguage(lang, showLoader = false) {
                 el.innerHTML = "";
                 icons.forEach(icon => el.appendChild(icon));
                 el.append(" " + translations[lang][key]);
+            } else if (key === "title") {
+                el.innerHTML = translations[lang][key];
             } else {
                 el.textContent = translations[lang][key];
             }

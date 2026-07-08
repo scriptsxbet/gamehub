@@ -63,7 +63,9 @@
                 </div>
             </div>
 
-            <div class="loader-brand">VexPlay</div>
+            <div class="loader-brand">
+                <span class="loader-brand-vex">Vex</span><span class="loader-brand-play">Play</span>
+            </div>
 
             <div class="loader-progress">
                 <span></span>
@@ -89,7 +91,11 @@
             <i class='bx bx-moon'></i>
         </button>
 
-        <div class="logo"><a href="/">VexPlay</a></div>
+        <div class="logo">
+            <a href="/">
+                <span class="logo-vex">Vex</span><span class="logo-play">Play</span>
+            </a>
+        </div>
 
         <div class="language-box">
             <select id="langSelect" class="lang-select">
@@ -135,8 +141,9 @@
                     SECURE TOOLS HUB
                 </span>
 
-                <h1 data-key="title">أدوات مجانية بالكامل</h1>
-
+                <h1 data-key="title" class="hero-title">
+                    اسكربتات مجانية <span class="blue-word">بالكامل</span>
+                </h1>
                 <p data-key="subtitle">
                     في VexPlay ستجد جميع أدواتنا المجانية بالكامل التي تتنصت على خوادم منصات المراهنات بشكل احترافي
                     ودقيق
@@ -155,72 +162,80 @@
                     </button>
                 </div>
 
-                <div class="hero-stats">
-                    <div>
-                        <strong>100%</strong>
-                        <span data-key="statFree">مجاني</span>
-                    </div>
 
-                    <div>
-                        <strong>24/7</strong>
-                        <span data-key="statOnline">متاح دائمًا</span>
-                    </div>
-
-                    <div>
-                        <strong>APK</strong>
-                        <span data-key="statAndroid">أندرويد</span>
-                    </div>
-                </div>
             </div>
         </section>
 
         <section class="cards" id="tools">
 
-            <article class="card reveal-card">
-                <div class="tool-card-head">
-                    <h2>CRASHUP SCRIPT</h2>
 
-                    <div class="card-icon">
-                        <img src="img/crashup.png" alt="CRASHUP">
+
+            <article class="card reveal-card script-card">
+                <div class="script-card-main">
+                    <div class="script-badges-row">
+                        <span class="script-status-badge">
+                            <span data-key="scriptStatus">سكربت</span>
+                            <b></b>
+                        </span>
+
+                        <span class="script-free-badge">
+                            <i class='bx bxs-gift'></i>
+                            <span data-key="freeBadge">مجانا بالكامل</span>
+                        </span>
+                    </div>
+
+                    <div class="script-head-row">
+                        <div class="script-title-wrap">
+                            <h2 class="script-card-title">
+                                <span>CRASHUP</span>
+                                <b>SCRIPT</b>
+                            </h2>
+                        </div>
+
+                        <div class="script-card-visual">
+                            <div class="script-logo-box">
+                                <img src="img/crashup.png" alt="CRASHUP">
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="script-card-desc" data-key="desc1">
+                        اسكربت مجاني بالكامل تم تطويره للتنصت على WebSocket لعبة Crash وسحب توقيت الانفجار قبل بداية
+                        الجولة وعرضه في الاسكربت فوراً
+                    </p>
+                </div>
+
+                <div class="script-features-row">
+                    <div class="script-feature-mini">
+                        <i class='bx bx-target-lock'></i>
+                        <span data-key="scriptAccuracy">دقة متناهية</span>
+                    </div>
+
+                    <div class="script-feature-mini">
+                        <i class='bx bx-shield-quarter'></i>
+                        <span data-key="scriptSecurity">أمان عالي</span>
+                    </div>
+
+                    <div class="script-feature-mini">
+                        <i class='bx bxs-bolt'></i>
+                        <span data-key="scriptSpeed">سرعة فائقة</span>
                     </div>
                 </div>
 
-                <div class="hero-top tool-badges-row">
-                    <span class="free-badge" data-key="freeBadge">
-                        <i class='bx bx-gift'></i>
-                        مجانا بالكامل
-                    </span>
 
-                    <span class="hero-online" data-key="live">
-                        <i class='bx bxs-circle'></i>
-                        نشط الآن
-                    </span>
-                </div>
-
-                <p data-key="desc1">
-                    اسكربت مجاني بالكامل تم تطويرها للتنصت على WebSocket لعبة Crash
-                    وسحب توقيت الانفجار قبل بداية الجولة وعرضه
-                </p>
-
-                <div class="platforms">
-                    <span>1xBet</span>
-                    <span>Melbet</span>
-                    <span>Linebet</span>
-                </div>
-
-                <div class="card-actions">
-                    <a href="/crashup" class="btn" data-key="details">
-                        تفاصيل أكثر
+                <div class="script-card-actions">
+                    <a href="/crashup" class="script-action-btn script-download-btn">
+                        <i class='bx bxs-download'></i>
+                        <span data-key="details">تحميل الاسكربت</span>
                     </a>
 
-
-                    <button type="button" class="btn demo-btn features-open-btn" id="featuresOpenBtn">
+                    <button type="button" class="script-action-btn script-features-btn features-open-btn"
+                        id="featuresOpenBtn">
+                        <i class='bx bx-list-ul'></i>
                         <span data-key="script_feature">مميزات الاسكربت</span>
                     </button>
-
                 </div>
             </article>
-
 
 
 
@@ -385,53 +400,72 @@
                 </div>
             </div>
 
-            <div class="usage-block">
-                <div class="usage-title">
-                    <i class='bx bx-list-check'></i>
-                    <h3 data-key="usageTitle">طريقة الاستخدام</h3>
+            <div class="script-benefits-block">
+                <div class="script-benefits-title">
+                    <i class='bx bx-star'></i>
+                    <h3 data-key="scriptBenefitsTitle">مميزات اسكربت CrashUp</h3>
                 </div>
 
-                <div class="usage-steps">
-                    <div class="usage-step">
+                <div class="script-benefits-list">
+                    <div class="script-benefit-item">
                         <span>01</span>
-                        <div>
-                            <h4 data-key="usageStepOneTitle">إنشاء حساب جديد</h4>
-                            <p data-key="usageStepOneDesc">
-                                انشاء حساب جديد على منصة 1xBet أو MelBet أو LineBet باستخدام الرمز الترويجي B95X لربط
-                                الاسكربت بشكل صحيح بحسابك.
-                            </p>
-                        </div>
+                        <p data-key="scriptBenefitOne">السكربت مجاني بالكامل ولا يتطلب أي رسوم أو اشتراكات.</p>
                     </div>
 
-                    <div class="usage-step">
+                    <div class="script-benefit-item">
                         <span>02</span>
-                        <div>
-                            <h4 data-key="usageStepTwoTitle">إكمال البيانات الشخصية</h4>
-                            <p data-key="usageStepTwoDesc">
-                                إكمال البيانات الشخصية في حسابك الجديد واضافة رقم الهاتف والبريد الإلكتروني.
-                            </p>
-                        </div>
+                        <p data-key="scriptBenefitTwo">سهل الاستخدام ويمكن تفعيله على حسابك بخطوات بسيطة وسريعة.</p>
                     </div>
 
-                    <div class="usage-step">
+                    <div class="script-benefit-item">
                         <span>03</span>
-                        <div>
-                            <h4 data-key="usageStepThreeTitle">إيداع الرصيد</h4>
-                            <p data-key="usageStepThreeDesc">
-                                إيداع ما لا يقل عن 40 دولار في حسابك او مايعادل 2000 جنيه مصري.
-                            </p>
-                        </div>
+                        <p data-key="scriptBenefitThree">يتميز بواجهة سهلة وسريعة تناسب جميع المستخدمين.</p>
                     </div>
-                </div>
 
-                <div class="usage-alert">
-                    <i class='bx bx-info-circle'></i>
-                    <p data-key="usageAlert">
-                        هذا الرصيد تقوم بشحنه داخل حسابك وهو ليس رسوم للتفعيل ولكنه في حسابك ويمكنك التصرف فيه كما تشاء
-                        ويمكنك سحبه حسب قوانين كل منصة.
-                    </p>
+                    <div class="script-benefit-item">
+                        <span>04</span>
+                        <p data-key="scriptBenefitFour">يعرض رقم انفجار لعبة Crash المسمي لعبة الطيارة قبل بداية الجولة.
+                        </p>
+                    </div>
+
+                    <div class="script-benefit-item">
+                        <span>05</span>
+                        <p data-key="scriptBenefitFive">يعمل بسرعة واستقرار لتوفير أفضل تجربة استخدام.</p>
+                    </div>
+
+                    <div class="script-benefit-item">
+                        <span>06</span>
+                        <p data-key="scriptBenefitSix">لا يسبب تعليقًا أو إيقافًا للحساب عند استخدامه بالطريقة الصحيحة.
+                        </p>
+                    </div>
+
+                    <div class="script-benefit-item">
+                        <span>07</span>
+                        <p data-key="scriptBenefitSeven">عمليات السحب من الحساب تتم بشكل طبيعي وتصل إليك بشكل فوري.</p>
+                    </div>
+
+                    <div class="script-benefit-item">
+                        <span>08</span>
+                        <p data-key="scriptBenefitEight">يتم تحديث السكربت باستمرار لتحسين الأداء وإضافة مزايا جديدة.
+                        </p>
+                    </div>
+
+                    <div class="script-benefit-item">
+                        <span>09</span>
+                        <p data-key="scriptBenefitNine">فريق الدعم متوفر للمساعدة في حالة مواجهة أي استفسار أو مشكلة.
+                        </p>
+                    </div>
+
+                    <div class="script-benefit-note">
+                        <i class='bx bx-info-circle'></i>
+                        <p data-key="scriptBenefitNote">
+                            نسعى دائمًا لتقديم تجربة استخدام سهلة، مستقرة، وعالية الجودة لجميع المستخدمين، مع التركيز
+                            على الأداء والسرعة وسهولة التفعيل.
+                        </p>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 
