@@ -1414,3 +1414,64 @@ html[data-theme="light"] .lang-box i {
 html[data-theme="light"] .lang-box p {
     color: #526174;
 }
+
+/* Mobile Header Controls Beside Language */
+@media (max-width: 600px) {
+    .header {
+        height: auto;
+        min-height: unset;
+        padding: 18px;
+        display: grid;
+        grid-template-columns: 44px 44px 140px;
+        justify-content: center;
+        align-items: center;
+        gap: 12px 10px;
+    }
+
+    .logo {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        text-align: center;
+        margin-bottom: 2px;
+    }
+
+    .menu-toggle,
+    .theme-toggle,
+    .language-box,
+    html[dir="ltr"] .menu-toggle,
+    html[dir="ltr"] .theme-toggle,
+    html[dir="ltr"] .language-box {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+    }
+
+    .menu-toggle {
+        grid-column: 1;
+        grid-row: 2;
+        width: 44px;
+        height: 44px;
+    }
+
+    .theme-toggle {
+        grid-column: 2;
+        grid-row: 2;
+        width: 44px;
+        height: 44px;
+    }
+
+    .language-box,
+    html[dir="ltr"] .language-box {
+        grid-column: 3;
+        grid-row: 2;
+        width: 140px;
+        height: 44px;
+    }
+
+    .menu-toggle:hover,
+    .theme-toggle:hover {
+        transform: scale(1.04);
+    }
+}
