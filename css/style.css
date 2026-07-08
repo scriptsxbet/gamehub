@@ -1475,3 +1475,429 @@ html[data-theme="light"] .lang-box p {
         transform: scale(1.04);
     }
 }
+
+
+/* Professional Home Hero */
+.hero-pro {
+    width: min(1160px, 92%);
+    margin: 70px auto 56px;
+    min-height: 470px;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    padding: 68px 30px;
+    border-radius: 34px;
+    text-align: center;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(77, 163, 255, .22), transparent 28%),
+        radial-gradient(circle at 80% 10%, rgba(125, 211, 252, .14), transparent 30%),
+        linear-gradient(180deg, rgba(17, 24, 39, .76), rgba(8, 13, 22, .78));
+    border: 1px solid rgba(125, 211, 252, .16);
+    box-shadow:
+        0 34px 100px rgba(0, 0, 0, .34),
+        inset 0 0 70px rgba(77, 163, 255, .045);
+}
+
+.hero-pro::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(transparent 96%, rgba(77, 163, 255, .055) 100%);
+    background-size: 100% 7px;
+    opacity: .55;
+    pointer-events: none;
+}
+
+.hero-pro::after {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, .055);
+    pointer-events: none;
+}
+
+.hero-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(18px);
+    opacity: .65;
+    pointer-events: none;
+}
+
+.hero-glow-1 {
+    width: 280px;
+    height: 280px;
+    right: -90px;
+    top: -90px;
+    background: rgba(77, 163, 255, .20);
+    animation: heroFloat 5s ease-in-out infinite alternate;
+}
+
+.hero-glow-2 {
+    width: 240px;
+    height: 240px;
+    left: -80px;
+    bottom: -90px;
+    background: rgba(125, 211, 252, .16);
+    animation: heroFloat 6s ease-in-out infinite alternate-reverse;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+    margin: auto;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.hero-badge i {
+    font-size: 18px;
+}
+
+.hero-pro h1 {
+    font-size: clamp(42px, 8vw, 82px);
+    line-height: 1.05;
+    margin-bottom: 20px;
+    color: var(--silver);
+    letter-spacing: -1px;
+    text-shadow: 0 0 35px rgba(77, 163, 255, .16);
+}
+
+.hero-pro p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.hero-btn {
+    min-width: 210px;
+    height: 58px;
+    padding: 0 24px;
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 900;
+    transition: .3s ease;
+}
+
+.hero-btn i {
+    font-size: 23px;
+}
+
+.hero-btn-primary {
+    color: #07111f;
+    background: linear-gradient(90deg, var(--primary), var(--primary2), var(--silver));
+    box-shadow: 0 20px 55px rgba(77, 163, 255, .28);
+}
+
+.hero-btn-secondary {
+    color: var(--primary2);
+    background: rgba(255, 255, 255, .045);
+    border: 1px solid rgba(125, 211, 252, .26);
+    box-shadow: inset 0 0 28px rgba(77, 163, 255, .035);
+}
+
+.hero-btn:hover {
+    transform: translateY(-5px);
+}
+
+.hero-btn-primary:hover {
+    box-shadow: 0 28px 70px rgba(77, 163, 255, .38);
+}
+
+.hero-btn-secondary:hover {
+    background: rgba(125, 211, 252, .10);
+    border-color: rgba(125, 211, 252, .45);
+}
+
+.hero-stats {
+    width: min(620px, 100%);
+    margin: 34px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.hero-stats div {
+    min-height: 82px;
+    padding: 14px 10px;
+    border-radius: 18px;
+    background:
+        linear-gradient(135deg, rgba(77, 163, 255, .10), rgba(125, 211, 252, .035)),
+        rgba(255, 255, 255, .045);
+    border: 1px solid rgba(125, 211, 252, .12);
+    display: grid;
+    place-items: center;
+}
+
+.hero-stats strong {
+    color: var(--silver);
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.hero-stats span {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+@keyframes heroFloat {
+    from {
+        transform: translateY(0) scale(.96);
+    }
+
+    to {
+        transform: translateY(18px) scale(1.06);
+    }
+}
+
+/* Light Mode Hero */
+html[data-theme="light"] .hero-pro {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(20, 125, 255, .16), transparent 28%),
+        radial-gradient(circle at 80% 10%, rgba(0, 168, 255, .10), transparent 30%),
+        linear-gradient(180deg, rgba(255, 255, 255, .86), rgba(238, 245, 255, .88));
+    border-color: rgba(20, 125, 255, .14);
+    box-shadow:
+        0 34px 100px rgba(20, 125, 255, .12),
+        inset 0 0 70px rgba(20, 125, 255, .045);
+}
+
+html[data-theme="light"] .hero-pro::before {
+    background: linear-gradient(transparent 96%, rgba(20, 125, 255, .075) 100%);
+    background-size: 100% 7px;
+}
+
+html[data-theme="light"] .hero-btn-secondary {
+    color: #147dff;
+    background: rgba(20, 125, 255, .06);
+    border-color: rgba(20, 125, 255, .20);
+}
+
+html[data-theme="light"] .hero-stats div {
+    background:
+        linear-gradient(135deg, rgba(20, 125, 255, .08), rgba(0, 168, 255, .035)),
+        rgba(255, 255, 255, .72);
+    border-color: rgba(20, 125, 255, .12);
+}
+
+/* Mobile Hero */
+@media (max-width: 600px) {
+    .hero-pro {
+        width: calc(100% - 20px);
+        margin: 46px auto 38px;
+        min-height: auto;
+        padding: 48px 18px;
+        border-radius: 26px;
+    }
+
+    .hero-pro h1 {
+        font-size: 40px;
+        line-height: 1.12;
+    }
+
+    .hero-pro p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .hero-actions {
+        margin-top: 26px;
+        gap: 12px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        min-width: unset;
+        height: 56px;
+        font-size: 15px;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+        margin-top: 26px;
+    }
+
+    .hero-stats div {
+        min-height: 70px;
+    }
+}
+
+/* Explore Tools Button - Light Mode */
+html[data-theme="light"] .hero-btn-primary {
+    position: relative;
+    overflow: hidden;
+    color: #ffffff !important;
+    background:
+        linear-gradient(135deg, #0057ff 0%, #147dff 48%, #00c2ff 100%) !important;
+    border: 1px solid rgba(20, 125, 255, .55);
+    box-shadow:
+        0 22px 60px rgba(20, 125, 255, .34),
+        0 8px 22px rgba(0, 168, 255, .18),
+        inset 0 1px 0 rgba(255, 255, 255, .32) !important;
+    text-shadow: 0 1px 2px rgba(0, 34, 90, .28);
+}
+
+html[data-theme="light"] .hero-btn-primary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(120deg,
+            transparent 0%,
+            rgba(255, 255, 255, .42) 45%,
+            transparent 70%);
+    transform: translateX(-120%);
+    transition: .65s ease;
+}
+
+html[data-theme="light"] .hero-btn-primary:hover::before {
+    transform: translateX(120%);
+}
+
+html[data-theme="light"] .hero-btn-primary:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 168, 255, .75);
+    box-shadow:
+        0 30px 75px rgba(20, 125, 255, .46),
+        0 12px 34px rgba(0, 168, 255, .24),
+        inset 0 1px 0 rgba(255, 255, 255, .42) !important;
+}
+
+html[data-theme="light"] .hero-btn-primary i,
+html[data-theme="light"] .hero-btn-primary span {
+    position: relative;
+    z-index: 2;
+}
+
+html[data-theme="light"] .hero-btn-primary i {
+    color: #ffffff;
+    filter: drop-shadow(0 2px 4px rgba(0, 34, 90, .28));
+}
+
+/* Clean Light Mode Shadows */
+html[data-theme="light"] .header,
+html[data-theme="light"] .footer,
+html[data-theme="light"] .card,
+html[data-theme="light"] .soon-card,
+html[data-theme="light"] .hero-pro,
+html[data-theme="light"] .hero-stats div,
+html[data-theme="light"] .menu-toggle,
+html[data-theme="light"] .theme-toggle,
+html[data-theme="light"] .side-menu-links a,
+html[data-theme="light"] .lang-box,
+html[data-theme="light"] .pro-loader {
+    box-shadow:
+        0 18px 50px rgba(20, 125, 255, .08),
+        0 6px 18px rgba(7, 17, 31, .045) !important;
+}
+
+html[data-theme="light"] .card:hover,
+html[data-theme="light"] .hero-btn:hover,
+html[data-theme="light"] .side-menu-links a:hover,
+html[data-theme="light"] .menu-toggle:hover,
+html[data-theme="light"] .theme-toggle:hover {
+    box-shadow:
+        0 22px 58px rgba(20, 125, 255, .13),
+        0 8px 22px rgba(7, 17, 31, .055) !important;
+}
+
+html[data-theme="light"] .side-menu {
+    box-shadow:
+        -22px 0 60px rgba(20, 125, 255, .10),
+        -8px 0 22px rgba(7, 17, 31, .045) !important;
+}
+
+html[dir="ltr"][data-theme="light"] .side-menu {
+    box-shadow:
+        22px 0 60px rgba(20, 125, 255, .10),
+        8px 0 22px rgba(7, 17, 31, .045) !important;
+}
+
+html[data-theme="light"] .scroll-top-btn {
+    box-shadow:
+        0 16px 38px rgba(20, 125, 255, .22),
+        0 6px 16px rgba(7, 17, 31, .06) !important;
+}
+
+html[data-theme="light"] .scroll-top-btn:hover {
+    box-shadow:
+        0 22px 52px rgba(20, 125, 255, .30),
+        0 8px 20px rgba(7, 17, 31, .07) !important;
+}
+
+html[data-theme="light"] .side-menu-links a i {
+    box-shadow:
+        0 12px 28px rgba(20, 125, 255, .20) !important;
+}
+
+html[data-theme="light"] .loader-core {
+    box-shadow:
+        0 0 26px rgba(20, 125, 255, .16),
+        inset 0 0 16px rgba(20, 125, 255, .045) !important;
+}
+
+html[data-theme="light"] .loader-progress span {
+    box-shadow:
+        0 0 16px rgba(20, 125, 255, .35) !important;
+}
+
+html[data-theme="light"] .logo,
+html[data-theme="light"] .side-brand,
+html[data-theme="light"] .hero-pro h1,
+html[data-theme="light"] .loader-brand {
+    text-shadow: none !important;
+}
+
+html[data-theme="light"] .menu-toggle i,
+html[data-theme="light"] .theme-toggle i,
+html[data-theme="light"] .loader-core img {
+    filter: none !important;
+}
+
+/* Remove Burger + Theme Toggle Shadows */
+.menu-toggle,
+.theme-toggle,
+.menu-toggle:hover,
+.theme-toggle:hover,
+html[data-theme="light"] .menu-toggle,
+html[data-theme="light"] .theme-toggle,
+html[data-theme="light"] .menu-toggle:hover,
+html[data-theme="light"] .theme-toggle:hover {
+    box-shadow: none !important;
+}
+
+.menu-toggle i,
+.theme-toggle i,
+html[data-theme="light"] .menu-toggle i,
+html[data-theme="light"] .theme-toggle i {
+    filter: none !important;
+    text-shadow: none !important;
+}

@@ -52,6 +52,12 @@ const translations = {
         sideTelegram: "الإنضمام لقناة التليجرام",
         sideYoutube: "الاشتراك في قناة اليوتيوب",
 
+        exploreTools: "استكشاف الأدوات",
+        claimBonus: "احصل على المكافأة",
+        statFree: "مجاني",
+        statOnline: "متاح دائمًا",
+        statAndroid: "أندرويد",
+
     },
     en: {
         badge: "SECURE SCRIPTS HUB",
@@ -99,6 +105,12 @@ const translations = {
         supportBtn: "Contact Support",
         sideTelegram: "Join Telegram Channel",
         sideYoutube: "Subscribe to YouTube Channel",
+
+        exploreTools: "Explore Tools",
+        claimBonus: "Claim Bonus",
+        statFree: "Free",
+        statOnline: "Always Online",
+        statAndroid: "Android",
     }
 
 };
