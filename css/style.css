@@ -3335,3 +3335,39 @@ html[data-theme="light"] .usage-alert {
         font-size: 13px;
     }
 }
+
+/* Mobile Features Dialog Safe Spacing + Inner Scroll */
+@media (max-width: 600px) {
+    .features-modal {
+        align-items: start !important;
+        place-items: unset !important;
+        padding:
+            calc(env(safe-area-inset-top, 0px) + 28px) 14px calc(env(safe-area-inset-bottom, 0px) + 24px) !important;
+        overflow-y: auto !important;
+    }
+
+    .features-dialog {
+        width: 100% !important;
+        max-height: calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 56px) !important;
+        overflow-y: auto !important;
+        overscroll-behavior: contain !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding: 30px 16px 18px !important;
+        border-radius: 26px !important;
+        margin: 0 auto !important;
+    }
+
+    .features-dialog::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    .features-head {
+        padding-top: 4px;
+    }
+
+    .features-close {
+        top: 14px !important;
+        inset-inline-end: 14px !important;
+    }
+}
