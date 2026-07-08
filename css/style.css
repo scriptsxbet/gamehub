@@ -4201,3 +4201,26 @@ html[data-theme="light"] .features-dialog::-webkit-scrollbar-thumb {
         overflow-y: auto !important;
     }
 }
+
+
+html[data-theme="light"] .script-download-btn {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #147dff 0%, #00a8ff 100%) !important;
+    border: 1px solid rgba(20, 125, 255, .38) !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+html[data-theme="light"] .script-download-btn i,
+html[data-theme="light"] .script-download-btn span {
+    color: #ffffff !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+html[data-theme="light"] .script-download-btn:hover {
+    background: linear-gradient(135deg, #006cff 0%, #00a8ff 100%) !important;
+    border-color: rgba(20, 125, 255, .55) !important;
+    box-shadow: none !important;
+}
