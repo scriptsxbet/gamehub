@@ -52,8 +52,8 @@ body {
     min-height: 100vh;
     color: var(--text);
     background:
-        radial-gradient(circle at top, rgba(77, 163, 255, .045), transparent 30%),
-        linear-gradient(180deg, #03050a 0%, #020307 55%, #000103 100%) !important;
+        radial-gradient(circle at top, rgba(77, 163, 255, .055), transparent 34%),
+        linear-gradient(180deg, #0a0f18 0%, #080d16 55%, #060b13 100%) !important;
     overflow-x: hidden;
 }
 
@@ -4700,4 +4700,60 @@ html[data-theme="light"] .tools-heading-section .compat-title span::after {
     .tools-heading-section .compat-title span {
         width: 30px;
     }
+}
+
+/* Loader Background Same As Current Website Background */
+html:not([data-theme="light"]) .loader,
+html:not([data-theme="light"]) .lang-loader {
+    background:
+        radial-gradient(circle at top, rgba(77, 163, 255, .045), transparent 30%),
+        linear-gradient(180deg, #03050a 0%, #020307 55%, #000103 100%) !important;
+}
+
+html[data-theme="light"] .loader,
+html[data-theme="light"] .lang-loader {
+    background:
+        radial-gradient(circle at top, rgba(20, 125, 255, .025), transparent 32%),
+        linear-gradient(180deg, #fbfcff 0%, #f7f9fc 55%, #f3f5f8 100%) !important;
+}
+
+/* Remove different loader overlay effects */
+.loader::before,
+.loader::after {
+    display: none !important;
+}
+
+/* Strict Light Mode - No Shadows */
+html[data-theme="light"] .promo-page *,
+html[data-theme="light"] .promo-page *::before,
+html[data-theme="light"] .promo-page *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+html[data-theme="light"] .promo-hero,
+html[data-theme="light"] .promo-code-card,
+html[data-theme="light"] .promo-bonus-card,
+html[data-theme="light"] .promo-benefit-card,
+html[data-theme="light"] .promo-platform-card,
+html[data-theme="light"] .promo-cta-card {
+    background: linear-gradient(180deg, var(--card2), var(--card)) !important;
+    border-color: var(--line) !important;
+}
+
+html[data-theme="light"] .promo-gift-aura {
+    filter: blur(10px) !important;
+    opacity: .35 !important;
+}
+
+html[data-theme="light"] .promo-gift-box i,
+html[data-theme="light"] .promo-rocket i {
+    filter: none !important;
+}
+
+html[data-theme="light"] .promo-copy-btn,
+html[data-theme="light"] .promo-activate-btn,
+html[data-theme="light"] .promo-toast {
+    box-shadow: none !important;
+    text-shadow: none !important;
 }

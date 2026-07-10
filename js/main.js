@@ -100,6 +100,54 @@ const translations = {
         scriptBenefitNine: "فريق الدعم متوفر للمساعدة في حالة مواجهة أي استفسار أو مشكلة.",
         scriptBenefitNote: "نسعى دائمًا لتقديم تجربة استخدام سهلة، مستقرة، وعالية الجودة لجميع المستخدمين، مع التركيز على الأداء والسرعة وسهولة التفعيل.",
         latestToolsTitle: "أحدث أدوات VexPlay",
+        // Apple Hex
+
+        applehexDes: "اسكربت مجاني بالكامل تم تطويره لفتح جلسة تنصت على معرف الجولة الحالي في لعبة Apple Of Fortune وإظهار صفوف التفاحة باحترافية ودقة عالية",
+        appleHexFaqQ1: "اسباب شروط الاستخدام لتفعيل الاسكربت؟",
+        appleHexFaqQ3: "شاهد قوة استخدام الاسكربت للعبة التفاحة",
+        appleHexFaqDesc1: "في هذا الفيديو ستتعرف على جميع اسباب عدم تشغيل الاسكربت وكيفية حلها لتتمكن من استخدام اسكربت APPLEHEX.",
+        appleHexFaqDesc2: "في هذا الفيديو ستتعرف على اسباب شروط الاستخدام لتفعيل الاسكربت",
+        appleHexFaqDesc3: "في هذا الفيديو ستشاهد قوة اسكربت Apple Hex على لعبة Apple Of Fortune",
+        // APPLE HEX DIALOG
+        appleHexFeaturesMiniLabel: "مميزات APPLE HEX",
+        appleHexFeaturesTitle: "كل ما تحتاجه في اسكربت واحد",
+        appleHexFeaturesSubtitle: "اسكربت APPLE HEX احترافي مجاني بالكامل وسريع ودقيق للعمل مع منصات 1xBet و MelBet و LineBet.",
+        appleHexBenefitsTitle: "مميزات اسكربت APPLE HEX",
+        appleHexBenefitOne: "سهل الاستخدام ويمكن تفعيله على حسابك بخطوات بسيطة وسريعة.",
+        appleHexBenefitTwo: "يعرض صفوف لعبة Apple Of Fortune بطريقة احترافية قبل بداية الجولة.",
+        appleHexBenefitThree: "يعمل بسرعة واستقرار لتوفير أفضل تجربة استخدام.",
+        appleHexBenefitFour: "لا يسبب تعليقًا أو إيقافًا للحساب عند استخدامه بالطريقة الصحيحة.",
+        appleHexBenefitFive: "يتم تحديث السكربت باستمرار لتحسين الأداء وإضافة مزايا جديدة.",
+        appleHexBenefitNote: "نسعى دائمًا لتقديم تجربة استخدام سهلة، مستقرة، وعالية الجودة لجميع المستخدمين، مع التركيز على الأداء والسرعة وسهولة التفعيل.",
+        appleHexFeatureOneTitle: "مجانا بالكامل",
+        appleHexFeatureTwoTitle: "سريع ودقيق",
+        appleHexFeatureThreeTitle: "اختيارات صحيحة 100%",
+        appleHexDownloadTitle: "تحميل Apple Hex APK",
+        // Promo
+        promoHeroTitleOne: "هدية خاصة من",
+        promoHeroDesc: "استخدم رمز البروموكود عند إنشاء حسابك واستمتع بمزايا حصرية مصممة خصيصاً لأعضاء مجتمع VexPlay.",
+        promoCodeLabel: "رمز البروموكود",
+        promoCopyBtn: "انسخ الرمز",
+        promoCopiedBtn: "تم النسخ",
+        promoBonusLabel: "مكافأة ترحيبية حتى",
+        promoBonusDesc: "على أول إيداع لك!",
+        promoBenefitsTitleOne: "مزايا حصرية عند استخدام",
+        promoBenefitOneTitle: "مكافأة ترحيبية 200%",
+        promoBenefitOneDesc: "استمتع بمكافأة ترحيبية تصل إلى 200% على أول إيداع لك لزيادة رصيدك وبدء تجربتك بأفضل شكل.",
+        promoBenefitTwoTitle: "حماية واستقرار أكبر للحساب",
+        promoBenefitTwoDesc: "نستخدم أحدث التقنيات لضمان تجربة آمنة وسلسة مع تقليل أي مشكلات قد تواجهك أثناء اللعب.",
+        promoBenefitThreeTitle: "نسبة حظ إضافية تصل إلى 95%",
+        promoBenefitThreeDesc: "احصل على نسبة حظ إضافية تصل إلى 95% عند استخدامك للبروموكود B95X، مما يعزز فرصك لتحقيق نتائج أفضل.",
+        promoBenefitFourTitle: "سحب أسبوعي على 1000 مستخدم",
+        promoBenefitFourDesc: "يتم اختيار 1000 مستخدم عشوائياً كل أسبوع، ويحصل كل فائز على هدية نقدية بقيمة 10$ تضاف إلى حسابه.",
+        promoPlatformsTitle: "التسجيل متاح عبر",
+        promoPlatformsNoteOne: "استخدم البروموكود",
+        promoPlatformsNoteTwo: "عند التسجيل عبر المنصات أعلاه واستمتع بجميع المزايا والعروض الحصرية.",
+        promoCtaTitleOne: "فعّل البروموكود",
+        promoCtaTitleTwo: "الآن",
+        promoCtaDesc: "استمتع بالمكافآت الحصرية وادخل السحب الأسبوعي على 1000 فائز كل أسبوع!",
+        promoActivateBtn: "تفعيل البروموكود B95X",
+        promoToast: "تم نسخ البروموكود بنجاح",
     },
     en: {
         badge: "SECURE SCRIPTS HUB",
@@ -198,7 +246,53 @@ const translations = {
         scriptBenefitNine: "The support team is available to help with any question or issue.",
         scriptBenefitNote: "We always aim to provide an easy, stable, and high-quality experience for all users, focusing on performance, speed, and simple activation.",
         latestToolsTitle: "Latest VexPlay Tools",
-
+        // APPLE HEX
+        applehexDes: "A completely free script designed to monitor the current round ID in the Apple Of Fortune game and display the apple rows with professional accuracy and high performance",
+        appleHexFaqQ1: "Why are there activation requirements for using the script?",
+        appleHexFaqQ3: "Watch the power of using the script for the Apple Of Fortune game",
+        appleHexFaqDesc1: "In this video, you will discover the main reasons why the script may not run properly and how to solve them to start using the APPLEHEX script.",
+        appleHexFaqDesc2: "In this video, you will understand the reasons behind the usage requirements needed to activate the script.",
+        appleHexFaqDesc3: "In this video, you will see the power of the Apple Hex script in action on the Apple Of Fortune game.",
+        // APPLE HEX DIALOG
+        appleHexFeaturesMiniLabel: "APPLE HEX Features",
+        appleHexFeaturesTitle: "Everything You Need In One Script",
+        appleHexFeaturesSubtitle: "APPLE HEX is a fully free, fast, and accurate script made to work with 1xBet, MelBet, and LineBet.",
+        appleHexBenefitsTitle: "APPLE HEX Script Features",
+        appleHexBenefitOne: "Easy to use and can be activated on your account with simple and quick steps.",
+        appleHexBenefitTwo: "It displays Apple Of Fortune rows professionally before the round starts.",
+        appleHexBenefitThree: "It runs quickly and steadily to provide the best usage experience.",
+        appleHexBenefitFour: "It does not cause account suspension when used correctly.",
+        appleHexBenefitFive: "The script is continuously updated to improve performance and add new features.",
+        appleHexBenefitNote: "We always aim to provide an easy, stable, and high-quality experience for all users, focusing on performance, speed, and simple activation.",
+        appleHexFeatureOneTitle: "100% Free",
+        appleHexFeatureTwoTitle: "Fast & Accurate",
+        appleHexFeatureThreeTitle: "100% Correct Choices",
+        appleHexDownloadTitle: "Download Apple Hex APK",
+        // Promo
+        promoHeroTitleOne: "Special Gift From",
+        promoHeroDesc: "Use the promo code when creating your account and enjoy exclusive benefits designed especially for the VexPlay community.",
+        promoCodeLabel: "Promo Code",
+        promoCopyBtn: "Copy Code",
+        promoCopiedBtn: "Copied",
+        promoBonusLabel: "Welcome Bonus Up To",
+        promoBonusDesc: "On your first deposit!",
+        promoBenefitsTitleOne: "Exclusive Benefits When Using",
+        promoBenefitOneTitle: "200% Welcome Bonus",
+        promoBenefitOneDesc: "Enjoy a welcome bonus up to 200% on your first deposit to boost your balance and start your experience in the best way.",
+        promoBenefitTwoTitle: "Better Account Protection And Stability",
+        promoBenefitTwoDesc: "We use the latest technologies to ensure a safe and smooth experience while reducing any issues you may face during gameplay.",
+        promoBenefitThreeTitle: "Extra Luck Rate Up To 95%",
+        promoBenefitThreeDesc: "Get an extra luck rate up to 95% when using promo code B95X, helping increase your chances of better results.",
+        promoBenefitFourTitle: "Weekly Draw For 1000 Users",
+        promoBenefitFourDesc: "1000 users are randomly selected every week, and each winner receives a $10 cash gift added to their account.",
+        promoPlatformsTitle: "Registration Available Through",
+        promoPlatformsNoteOne: "Use promo code",
+        promoPlatformsNoteTwo: "when signing up through the platforms above and enjoy all exclusive benefits and offers.",
+        promoCtaTitleOne: "Activate Promo Code",
+        promoCtaTitleTwo: "Now",
+        promoCtaDesc: "Enjoy exclusive rewards and enter the weekly draw for 1000 winners every week!",
+        promoActivateBtn: "Activate Promo Code B95X",
+        promoToast: "Promo code copied successfully",
     }
 
 };
@@ -966,5 +1060,43 @@ document.querySelectorAll("[data-features-close]").forEach(btn => {
 document.addEventListener("keydown", e => {
     if (e.key === "Escape" && featuresModal && featuresModal.classList.contains("show")) {
         closeFeaturesModal();
+    }
+});
+
+// APPLE HEX Features Dialog
+const appleHexFeaturesOpenBtn = document.getElementById("appleHexFeaturesOpenBtn");
+const appleHexFeaturesModal = document.getElementById("appleHexFeaturesModal");
+
+function openAppleHexFeaturesModal() {
+    if (!appleHexFeaturesModal) return;
+
+    appleHexFeaturesModal.classList.add("show");
+    appleHexFeaturesModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("sidebar-open");
+}
+
+function closeAppleHexFeaturesModal() {
+    if (!appleHexFeaturesModal) return;
+
+    appleHexFeaturesModal.classList.remove("show");
+    appleHexFeaturesModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("sidebar-open");
+}
+
+if (appleHexFeaturesOpenBtn) {
+    appleHexFeaturesOpenBtn.addEventListener("click", openAppleHexFeaturesModal);
+}
+
+document.querySelectorAll("[data-applehex-features-close]").forEach(btn => {
+    btn.addEventListener("click", closeAppleHexFeaturesModal);
+});
+
+document.addEventListener("keydown", e => {
+    if (
+        e.key === "Escape" &&
+        appleHexFeaturesModal &&
+        appleHexFeaturesModal.classList.contains("show")
+    ) {
+        closeAppleHexFeaturesModal();
     }
 });

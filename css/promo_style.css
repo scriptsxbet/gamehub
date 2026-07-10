@@ -1,0 +1,834 @@
+/* Promo Page - VexPlay Style */
+.promo-page {
+    width: 100%;
+    padding: 30px 0 58px;
+    overflow: hidden;
+}
+
+.promo-page,
+.promo-page * {
+    font-weight: 600;
+}
+
+.promo-page h1,
+.promo-page h2,
+.promo-page h3,
+.promo-page strong,
+.promo-page button,
+.promo-page .promo-code-value,
+.promo-page .promo-percent,
+.promo-page .promo-platform-logo,
+.promo-page .promo-card-label {
+    font-weight: 800;
+}
+
+/* Hero */
+.promo-hero {
+    width: min(1160px, 92%);
+    margin: 34px auto 26px;
+    min-height: 470px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    padding: 38px;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 28px;
+    background: linear-gradient(180deg, var(--card2), var(--card));
+    border: 1px solid var(--line);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, .32);
+}
+
+.promo-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 78% 24%, rgba(77, 163, 255, .16), transparent 30%),
+        radial-gradient(circle at 18% 85%, rgba(125, 211, 252, .08), transparent 34%),
+        linear-gradient(transparent 96%, rgba(77, 163, 255, .035) 100%);
+    background-size: auto, auto, 100% 6px;
+    pointer-events: none;
+}
+
+.promo-hero-content,
+.promo-gift-wrap {
+    position: relative;
+    z-index: 2;
+}
+
+.promo-main-title {
+    display: grid;
+    gap: 6px;
+    color: var(--silver);
+    font-size: clamp(38px, 5.4vw, 70px);
+    line-height: 1.12;
+    margin-bottom: 22px;
+}
+
+.promo-main-title strong {
+    direction: ltr;
+    display: inline-block;
+    width: fit-content;
+    color: var(--primary2);
+    background: linear-gradient(135deg, var(--primary), var(--primary2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.promo-hero p {
+    max-width: 610px;
+    color: var(--silver);
+    font-size: 20px;
+    line-height: 2;
+}
+
+/* Gift */
+.promo-gift-wrap {
+    min-height: 330px;
+    display: grid;
+    place-items: center;
+}
+
+.promo-gift-aura {
+    position: absolute;
+    width: min(360px, 70vw);
+    height: min(360px, 70vw);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(77, 163, 255, .22), transparent 68%);
+    filter: blur(10px);
+    animation: promoAuraPulse 3s ease-in-out infinite alternate;
+}
+
+.promo-gift-box {
+    position: relative;
+    width: min(285px, 62vw);
+    height: min(285px, 62vw);
+    border-radius: 42px;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(255, 255, 255, .10), transparent 24%),
+        linear-gradient(180deg, var(--card2), var(--card));
+    border: 1px solid rgba(125, 211, 252, .26);
+    box-shadow:
+        inset 0 0 42px rgba(77, 163, 255, .07),
+        0 28px 78px rgba(0, 0, 0, .32);
+    animation: promoGiftFloat 3.3s ease-in-out infinite;
+}
+
+.promo-gift-box::before,
+.promo-gift-box::after {
+    content: "";
+    position: absolute;
+    opacity: .55;
+    pointer-events: none;
+}
+
+.promo-gift-box::before {
+    width: 100%;
+    height: 4px;
+    top: 50%;
+    left: 0;
+    background: linear-gradient(90deg, transparent, var(--primary2), transparent);
+}
+
+.promo-gift-box::after {
+    width: 4px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: linear-gradient(180deg, transparent, var(--primary2), transparent);
+}
+
+.promo-gift-box i {
+    position: relative;
+    z-index: 3;
+    font-size: clamp(126px, 15vw, 174px);
+    color: var(--primary2);
+    filter: drop-shadow(0 0 26px rgba(125, 211, 252, .35));
+}
+
+.gift-spark {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--primary2);
+    box-shadow: 0 0 20px var(--primary2);
+    animation: sparkMove 2.3s ease-in-out infinite alternate;
+}
+
+.spark-one {
+    top: 18%;
+    left: 16%;
+}
+
+.spark-two {
+    top: 22%;
+    right: 15%;
+    animation-delay: .45s;
+}
+
+.spark-three {
+    bottom: 17%;
+    right: 24%;
+    animation-delay: .9s;
+}
+
+/* Code Cards */
+.promo-main-grid {
+    width: min(1160px, 92%);
+    margin: 0 auto 44px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.promo-code-card,
+.promo-bonus-card {
+    min-height: 236px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 26px;
+    padding: 26px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--card2), var(--card));
+    border: 1px solid var(--line);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, .28);
+}
+
+.promo-code-card::before,
+.promo-bonus-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(77, 163, 255, .11), transparent 38%);
+    pointer-events: none;
+}
+
+.promo-card-label {
+    position: relative;
+    z-index: 2;
+    display: block;
+    color: var(--silver);
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.promo-code-value {
+    position: relative;
+    z-index: 2;
+    direction: ltr;
+    color: var(--primary2);
+    font-size: clamp(68px, 10vw, 118px);
+    line-height: 1;
+    letter-spacing: 2px;
+    margin: 6px 0 20px;
+    text-shadow: 0 0 28px rgba(77, 163, 255, .26);
+}
+
+.promo-copy-btn,
+.promo-activate-btn {
+    position: relative;
+    z-index: 2;
+    height: 48px;
+    min-width: 150px;
+    max-width: 100%;
+    padding: 0 18px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    color: #07111f;
+    font-size: 15px;
+    line-height: 1;
+    white-space: nowrap;
+    background: linear-gradient(90deg, var(--primary), var(--primary2));
+    box-shadow: 0 18px 45px rgba(77, 163, 255, .24);
+    transition: .28s ease;
+}
+
+.promo-copy-btn i,
+.promo-activate-btn i {
+    font-size: 21px;
+    line-height: 1;
+    flex: 0 0 auto;
+}
+
+.promo-copy-btn span,
+.promo-activate-btn span {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.promo-copy-btn:hover,
+.promo-activate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 22px 55px rgba(77, 163, 255, .32);
+}
+
+.promo-percent {
+    position: relative;
+    z-index: 2;
+    direction: ltr;
+    color: var(--primary2);
+    font-size: clamp(82px, 11vw, 132px);
+    line-height: 1;
+    margin: 14px 0 13px;
+    text-shadow: 0 0 28px rgba(77, 163, 255, .26);
+}
+
+.promo-percent span {
+    font-size: .52em;
+}
+
+.promo-bonus-card p {
+    position: relative;
+    z-index: 2;
+    color: var(--silver);
+    font-size: 20px;
+    line-height: 1.75;
+}
+
+/* Titles */
+.promo-section-title {
+    width: min(1160px, 92%);
+    margin: 0 auto 22px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.promo-section-title>span {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(125, 211, 252, .42), transparent);
+}
+
+.promo-section-title h2 {
+    color: var(--silver);
+    font-size: clamp(26px, 4vw, 42px);
+    line-height: 1.35;
+}
+
+.promo-section-title h2 strong {
+    color: var(--primary2);
+}
+
+/* Benefits */
+.promo-benefits-section {
+    margin-bottom: 48px;
+}
+
+.promo-benefits-list {
+    width: min(1160px, 92%);
+    margin: 0 auto;
+    display: grid;
+    gap: 16px;
+}
+
+.promo-benefit-card {
+    min-height: 132px;
+    position: relative;
+    overflow: hidden;
+    padding: 22px 24px;
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(180deg, var(--card2), var(--card));
+    border: 1px solid var(--line);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .24);
+    transition: .3s ease;
+}
+
+.promo-benefit-card::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    top: 18px;
+    bottom: 18px;
+    width: 3px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, var(--primary), var(--primary2));
+}
+
+.promo-benefit-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(125, 211, 252, .30);
+}
+
+.promo-benefit-icon {
+    width: 82px;
+    height: 82px;
+    border-radius: 22px;
+    display: grid;
+    place-items: center;
+    background: rgba(77, 163, 255, .08);
+    border: 1px solid rgba(125, 211, 252, .18);
+}
+
+.promo-benefit-icon i {
+    color: var(--primary2);
+    font-size: 44px;
+}
+
+.promo-benefit-content h3 {
+    color: var(--primary2);
+    font-size: clamp(21px, 2.4vw, 27px);
+    margin-bottom: 7px;
+}
+
+.promo-benefit-content p {
+    color: var(--silver);
+    line-height: 1.85;
+    font-size: 17px;
+}
+
+/* Platforms */
+.promo-platforms-section {
+    width: min(1160px, 92%);
+    margin: 0 auto 48px;
+}
+
+.promo-platforms-section .promo-section-title {
+    width: 100%;
+}
+
+.promo-platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.promo-platform-card {
+    min-height: 96px;
+    border-radius: 22px;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    background: linear-gradient(180deg, var(--card2), var(--card));
+    border: 1px solid var(--line);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, .20);
+    transition: .28s ease;
+}
+
+.promo-platform-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(125, 211, 252, .30);
+}
+
+.promo-platform-logo {
+    direction: ltr;
+    color: var(--silver);
+    font-size: clamp(27px, 4vw, 44px);
+    letter-spacing: -1px;
+    font-style: italic;
+}
+
+.promo-1xbet span,
+.promo-melbet span {
+    color: var(--silver);
+}
+
+.promo-1xbet b {
+    color: var(--primary2);
+}
+
+.promo-melbet b {
+    color: #ffd447;
+}
+
+.promo-linebet {
+    color: var(--silver);
+}
+
+.promo-platforms-note {
+    max-width: 820px;
+    margin: 20px auto 0;
+    color: var(--silver);
+    line-height: 1.85;
+    text-align: center;
+    font-size: 18px;
+}
+
+.promo-platforms-note strong {
+    color: var(--primary2);
+}
+
+/* CTA */
+.promo-cta-section {
+    width: min(1160px, 92%);
+    margin: 0 auto;
+}
+
+.promo-cta-card {
+    min-height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    align-items: center;
+    gap: 26px;
+    background: linear-gradient(180deg, var(--card2), var(--card));
+    border: 1px solid var(--line);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, .30);
+}
+
+.promo-cta-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 15% 50%, rgba(77, 163, 255, .15), transparent 36%);
+    pointer-events: none;
+}
+
+.promo-rocket {
+    position: relative;
+    z-index: 2;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 36px;
+    display: grid;
+    place-items: center;
+    background: rgba(77, 163, 255, .08);
+    border: 1px solid rgba(125, 211, 252, .18);
+}
+
+.promo-rocket i {
+    color: var(--primary2);
+    font-size: 92px;
+    transform: rotate(-45deg);
+    filter: drop-shadow(0 0 22px rgba(125, 211, 252, .32));
+    animation: rocketFloat 2.8s ease-in-out infinite;
+}
+
+.promo-cta-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.promo-cta-content h2 {
+    color: var(--silver);
+    font-size: clamp(30px, 4.6vw, 54px);
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.promo-cta-content h2 strong {
+    color: var(--primary2);
+}
+
+.promo-cta-content p {
+    color: var(--silver);
+    font-size: 18px;
+    line-height: 1.85;
+    margin-bottom: 20px;
+}
+
+/* Toast */
+.promo-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 26px;
+    z-index: 10000;
+    min-height: 52px;
+    padding: 0 18px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    color: #07111f;
+    background: linear-gradient(90deg, var(--primary), var(--primary2));
+    box-shadow: 0 22px 55px rgba(77, 163, 255, .30);
+    transform: translate(-50%, 18px) scale(.96);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+    white-space: nowrap;
+    font-weight: 800;
+}
+
+.promo-toast i {
+    font-size: 23px;
+}
+
+.promo-toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0) scale(1);
+}
+
+/* Light Mode - No Shadows */
+html[data-theme="light"] .promo-page *,
+html[data-theme="light"] .promo-page *::before,
+html[data-theme="light"] .promo-page *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+html[data-theme="light"] .promo-hero,
+html[data-theme="light"] .promo-code-card,
+html[data-theme="light"] .promo-bonus-card,
+html[data-theme="light"] .promo-benefit-card,
+html[data-theme="light"] .promo-platform-card,
+html[data-theme="light"] .promo-cta-card {
+    background: linear-gradient(180deg, var(--card2), var(--card)) !important;
+    border-color: var(--line) !important;
+}
+
+html[data-theme="light"] .promo-gift-box,
+html[data-theme="light"] .promo-benefit-icon,
+html[data-theme="light"] .promo-rocket {
+    background: rgba(20, 125, 255, .06);
+    border-color: rgba(20, 125, 255, .14);
+}
+
+html[data-theme="light"] .promo-gift-aura {
+    opacity: .35;
+}
+
+html[data-theme="light"] .promo-gift-box i,
+html[data-theme="light"] .promo-rocket i {
+    filter: none !important;
+}
+
+html[data-theme="light"] .gift-spark {
+    box-shadow: none !important;
+}
+
+/* Animations */
+@keyframes promoAuraPulse {
+    from {
+        opacity: .55;
+        transform: scale(.95);
+    }
+
+    to {
+        opacity: .9;
+        transform: scale(1.06);
+    }
+}
+
+@keyframes promoGiftFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+@keyframes sparkMove {
+    from {
+        opacity: .35;
+        transform: translateY(0) scale(.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-16px) scale(1.2);
+    }
+}
+
+@keyframes rocketFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-45deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    .promo-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        min-height: auto;
+        padding: 36px 24px;
+    }
+
+    .promo-main-title strong {
+        margin-inline: auto;
+    }
+
+    .promo-hero p {
+        margin-inline: auto;
+    }
+
+    .promo-gift-wrap {
+        min-height: 280px;
+    }
+
+    .promo-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .promo-cta-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 720px) {
+    .promo-page {
+        padding-top: 16px;
+    }
+
+    .promo-hero,
+    .promo-main-grid,
+    .promo-benefits-list,
+    .promo-platforms-section,
+    .promo-cta-section {
+        width: calc(100% - 28px);
+    }
+
+    .promo-hero {
+        margin-top: 20px;
+        border-radius: 24px;
+        padding: 30px 18px;
+    }
+
+    .promo-main-title {
+        font-size: 34px;
+    }
+
+    .promo-hero p {
+        font-size: 16px;
+    }
+
+    .promo-gift-wrap {
+        min-height: 230px;
+    }
+
+    .promo-gift-box {
+        border-radius: 32px;
+    }
+
+    .promo-code-card,
+    .promo-bonus-card {
+        min-height: 210px;
+        padding: 24px 18px;
+        border-radius: 22px;
+    }
+
+    .promo-copy-btn {
+        height: 46px;
+        min-width: 140px;
+        font-size: 14px;
+        padding: 0 16px;
+    }
+
+    .promo-benefit-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 22px 18px;
+    }
+
+    .promo-benefit-icon {
+        margin: 0 auto;
+    }
+
+    .promo-benefit-card::before {
+        top: 0;
+        bottom: auto;
+        left: 24px;
+        right: 24px;
+        width: auto;
+        height: 3px;
+    }
+
+    .promo-platforms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .promo-platform-card {
+        min-height: 86px;
+    }
+
+    .promo-section-title {
+        width: calc(100% - 28px);
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .promo-section-title>span {
+        width: 120px;
+        margin: auto;
+    }
+
+    .promo-cta-card {
+        padding: 26px 18px;
+        border-radius: 22px;
+    }
+
+    .promo-rocket {
+        width: 132px;
+        height: 132px;
+        border-radius: 30px;
+    }
+
+    .promo-rocket i {
+        font-size: 80px;
+    }
+
+    .promo-activate-btn {
+        width: 100%;
+        height: 50px;
+        padding: 0 14px;
+        font-size: 14px;
+    }
+
+    .promo-toast {
+        width: calc(100% - 32px);
+        white-space: normal;
+        text-align: center;
+    }
+}
+
+@media (max-width: 420px) {
+    .promo-main-title {
+        font-size: 30px;
+    }
+
+    .promo-code-value {
+        font-size: 64px;
+    }
+
+    .promo-percent {
+        font-size: 76px;
+    }
+
+    .promo-copy-btn {
+        width: auto;
+        min-width: 132px;
+    }
+
+    .promo-benefit-content h3 {
+        font-size: 20px;
+    }
+
+    .promo-benefit-content p {
+        font-size: 14px;
+    }
+}
