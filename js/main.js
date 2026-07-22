@@ -175,7 +175,7 @@ const translations = {
         crashAiBenefitFour: "لا تسبب تعليقًا أو إيقافًا للحساب عند استخدامها بالطريقة الصحيحة.",
 
         crashAiBenefitFive: "يتم تحديث الأداة باستمرار لتحسين الأداء وإضافة مزايا جديدة.",
-
+        crashAiDownloadTitle: "تحميل CRASH AI APK",
         crashAiBenefitNote: "نسعى دائمًا إلى تقديم تجربة استخدام سهلة ومستقرة وعالية الجودة، مع التركيز على الأداء والسرعة وسهولة التفعيل.",
     },
     en: {
@@ -325,7 +325,7 @@ const translations = {
         // Crash AI
         // Crash AI
         crashAiDes: "A completely free script developed to analyze Crash game rounds and provide analytical insights before each round begins, helping you identify the right time to cash out and make more informed decisions.",
-
+        crashAiDownloadTitle: "Download CRASH AI APK",
         crashAiFeaturesMiniLabel: "CRASH AI Features",
 
         crashAiFeaturesTitle: "Everything You Need in One Tool",
