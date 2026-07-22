@@ -150,7 +150,7 @@ const translations = {
         promoToast: "تم نسخ البروموكود بنجاح",
         // Crash AI
         // Crash AI
-        crashAiDes: "أداة مجانية بالكامل، تم تطويرها لتحليل جولات لعبة Crash وتقديم مؤشرات تحليلية قبل بداية الجولة، لمساعدتك على اختيار التوقيت الأنسب لسحب أرباحك.",
+        crashAiDes: "اسكربت مجاني بالكامل، تم تطويره لتحليل جولات لعبة Crash وتقديم مؤشرات تحليلية قبل بداية الجولة، لمساعدتك على اختيار التوقيت الأنسب لسحب أرباحك.",
 
         crashAiFeaturesMiniLabel: "مميزات CRASH AI",
 
@@ -324,7 +324,7 @@ const translations = {
         promoToast: "Promo code copied successfully",
         // Crash AI
         // Crash AI
-        crashAiDes: "A completely free tool developed to analyze Crash game rounds and provide analytical insights before each round begins, helping you identify the right time to cash out and make more informed decisions.",
+        crashAiDes: "A completely free script developed to analyze Crash game rounds and provide analytical insights before each round begins, helping you identify the right time to cash out and make more informed decisions.",
 
         crashAiFeaturesMiniLabel: "CRASH AI Features",
 
