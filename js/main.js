@@ -148,6 +148,35 @@ const translations = {
         promoCtaDesc: "استمتع بالمكافآت الحصرية وادخل السحب الأسبوعي على 1000 فائز كل أسبوع!",
         promoActivateBtn: "تفعيل البروموكود B95X",
         promoToast: "تم نسخ البروموكود بنجاح",
+        // Crash AI
+        // Crash AI
+        crashAiDes: "أداة مجانية بالكامل، تم تطويرها لتحليل جولات لعبة Crash وتقديم مؤشرات تحليلية قبل بداية الجولة، لمساعدتك على اختيار التوقيت الأنسب لسحب أرباحك.",
+
+        crashAiFeaturesMiniLabel: "مميزات CRASH AI",
+
+        crashAiFeaturesTitle: "كل ما تحتاجه في أداة واحدة",
+
+        crashAiFeaturesSubtitle: "أداة CRASH AI احترافية ومجانية بالكامل، تم تطويرها لتوفير تحليلات سريعة ودقيقة للعمل مع منصات 1xBet وMelBet وLineBet.",
+
+        crashAiFeatureOneTitle: "مجانًا بالكامل",
+
+        crashAiFeatureTwoTitle: "سريع ودقيق",
+
+        crashAiFeatureThreeTitle: "تحليلات متقدمة",
+
+        crashAiBenefitsTitle: "مميزات أداة CRASH AI",
+
+        crashAiBenefitOne: "سهلة الاستخدام ويمكن تفعيلها على حسابك بخطوات بسيطة وسريعة.",
+
+        crashAiBenefitTwo: "تقدم تحليلات لجولات لعبة Crash قبل بداية الجولة لمساعدتك على تحديد توقيت السحب المناسب.",
+
+        crashAiBenefitThree: "تعمل بسرعة واستقرار لتوفير تجربة استخدام سلسة واحترافية.",
+
+        crashAiBenefitFour: "لا تسبب تعليقًا أو إيقافًا للحساب عند استخدامها بالطريقة الصحيحة.",
+
+        crashAiBenefitFive: "يتم تحديث الأداة باستمرار لتحسين الأداء وإضافة مزايا جديدة.",
+
+        crashAiBenefitNote: "نسعى دائمًا إلى تقديم تجربة استخدام سهلة ومستقرة وعالية الجودة، مع التركيز على الأداء والسرعة وسهولة التفعيل.",
     },
     en: {
         badge: "SECURE SCRIPTS HUB",
@@ -293,6 +322,35 @@ const translations = {
         promoCtaDesc: "Enjoy exclusive rewards and enter the weekly draw for 1000 winners every week!",
         promoActivateBtn: "Activate Promo Code B95X",
         promoToast: "Promo code copied successfully",
+        // Crash AI
+        // Crash AI
+        crashAiDes: "A completely free tool developed to analyze Crash game rounds and provide analytical insights before each round begins, helping you identify the right time to cash out and make more informed decisions.",
+
+        crashAiFeaturesMiniLabel: "CRASH AI Features",
+
+        crashAiFeaturesTitle: "Everything You Need in One Tool",
+
+        crashAiFeaturesSubtitle: "CRASH AI is a completely free professional tool developed to provide fast and accurate analysis for 1xBet, MelBet, and LineBet.",
+
+        crashAiFeatureOneTitle: "100% Free",
+
+        crashAiFeatureTwoTitle: "Fast & Accurate",
+
+        crashAiFeatureThreeTitle: "Advanced Analysis",
+
+        crashAiBenefitsTitle: "CRASH AI Tool Features",
+
+        crashAiBenefitOne: "Easy to use and can be activated on your account through simple and quick steps.",
+
+        crashAiBenefitTwo: "It provides Crash game round analysis before the round begins, helping you identify a suitable cash-out time.",
+
+        crashAiBenefitThree: "It runs quickly and steadily to provide a smooth and professional user experience.",
+
+        crashAiBenefitFour: "It does not cause account suspension when used correctly.",
+
+        crashAiBenefitFive: "The tool is continuously updated to improve performance and add new features.",
+
+        crashAiBenefitNote: "We always aim to provide an easy, stable, and high-quality user experience, with a focus on performance, speed, and simple activation.",
     }
 
 };
@@ -1060,6 +1118,67 @@ document.querySelectorAll("[data-features-close]").forEach(btn => {
 document.addEventListener("keydown", e => {
     if (e.key === "Escape" && featuresModal && featuresModal.classList.contains("show")) {
         closeFeaturesModal();
+    }
+});
+
+// CRASH AI Features Dialog
+const crashAiFeaturesOpenBtn = document.getElementById(
+    "crashAiFeaturesOpenBtn"
+);
+
+const crashAiFeaturesModal = document.getElementById(
+    "crashAiFeaturesModal"
+);
+
+function openCrashAiFeaturesModal() {
+    if (!crashAiFeaturesModal) return;
+
+    crashAiFeaturesModal.classList.add("show");
+
+    crashAiFeaturesModal.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    document.body.classList.add("sidebar-open");
+}
+
+function closeCrashAiFeaturesModal() {
+    if (!crashAiFeaturesModal) return;
+
+    crashAiFeaturesModal.classList.remove("show");
+
+    crashAiFeaturesModal.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    document.body.classList.remove("sidebar-open");
+}
+
+if (crashAiFeaturesOpenBtn) {
+    crashAiFeaturesOpenBtn.addEventListener(
+        "click",
+        openCrashAiFeaturesModal
+    );
+}
+
+document
+    .querySelectorAll("[data-crashai-features-close]")
+    .forEach(button => {
+        button.addEventListener(
+            "click",
+            closeCrashAiFeaturesModal
+        );
+    });
+
+document.addEventListener("keydown", event => {
+    if (
+        event.key === "Escape" &&
+        crashAiFeaturesModal &&
+        crashAiFeaturesModal.classList.contains("show")
+    ) {
+        closeCrashAiFeaturesModal();
     }
 });
 
